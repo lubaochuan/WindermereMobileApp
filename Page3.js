@@ -20,7 +20,7 @@ export class Page3 extends React.Component {
         <Text>Page 3</Text>
         <Button
           title='Go Home'
-          onPress={() => navigate('Home')}
+          //onPress={() => navigate('Home')}
         />
       </View>
     );
