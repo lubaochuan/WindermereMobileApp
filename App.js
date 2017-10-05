@@ -7,6 +7,7 @@ export default class App extends React.Component {
       <View style={styles.container}>
         <Text>Hello World! - Derek Sweiger</Text>
         <Text>Hey, I can be text too! - Gunnar Gilbertson</Text>
+        <Text>Hello World! - Sami Cruse</Text>
       </View>
     );
   }
