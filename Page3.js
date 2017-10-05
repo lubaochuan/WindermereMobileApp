@@ -18,10 +18,7 @@ export class Page3 extends React.Component {
     return (
       <View style={styles.container}>
         <Text>Page 3</Text>
-        <Button
-          title='Go Home'
-          //onPress={() => navigate('Home')}
-        />
+
       </View>
     );
   }
