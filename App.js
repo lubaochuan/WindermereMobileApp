@@ -4,10 +4,10 @@ import {StyleSheet, Text, View, Button } from 'react-native';
 import {StackNavigator} from 'react-navigation';
 
 //import classes/components
-import {SplashScreen} from './SplashScreen.js';
-import {HomeScreen} from './HomeScreen.js';
-import {ProfileScreen} from './ProfileScreen.js';
-import {Page3} from './Page3.js'
+import {SplashScreen} from './Pages/SplashScreen.js';
+import {HomeScreen} from './Pages/HomeScreen.js';
+import {ProfileScreen} from './Pages/ProfileScreen.js';
+import {Page3} from './Pages/Page3.js'
 
 
 const AppDriver = StackNavigator({

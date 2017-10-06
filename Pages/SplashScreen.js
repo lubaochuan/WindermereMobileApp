@@ -21,7 +21,7 @@ export class SplashScreen extends React.Component {
         <TouchableHighlight
           onPress={() => navigate('Home')}>
           <View>
-            <Text>SPLASH PAGE</Text>
+            <Text style={styles.text}>SPLASH PAGE</Text>
           </View>
         </TouchableHighlight>
       </View>
@@ -35,4 +35,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  text: {
+    color: 'grey',
+    fontSize: 30
+  }
 });

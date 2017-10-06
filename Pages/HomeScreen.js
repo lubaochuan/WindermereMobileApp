@@ -9,12 +9,12 @@ import {
   TouchableHighlight
 } from 'react-native';
 
+import {navOptions} from '../StyleSheets/NavigationOptionsObj.js';
+
 
 export class HomeScreen extends React.Component {
-  static navigationOptions = {
-    title: 'Home',
-    headerLeft: null,
-  };
+  static navigationOptions = navOptions('Home', false);
+
 
   render() {
     const { navigate } = this.props.navigation;
@@ -60,5 +60,8 @@ const styles = StyleSheet.create({
   buttonContainer: {
     margin: 5,
     marginBottom: 0,
+  },
+  headStyle: {
+    color: 'grey',
   }
 });

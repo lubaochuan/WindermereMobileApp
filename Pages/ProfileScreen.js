@@ -7,20 +7,19 @@ import {
   StyleSheet,
   Button
 } from 'react-native';
+import {navOptions} from '../StyleSheets/NavigationOptionsObj.js';
 
-export class Page3 extends React.Component {
-  static navigationOptions ={
-    title: 'Page 3'
-  };
+export class ProfileScreen extends React.Component {
+  static navigationOptions = navOptions('Profile', true);
 
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Text>Page 3</Text>
+      <View>
+        <Text>Profile Page</Text>
         <Button
-          title='GO HOME'
-          onPress={() => navigate('Home')}
+          title='Go to Page 3'
+          onPress={() => navigate('Page3')}
         />
       </View>
     );
