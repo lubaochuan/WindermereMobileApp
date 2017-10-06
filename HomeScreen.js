@@ -13,6 +13,7 @@ import {
 export class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
+    headerLeft: null,
   };
 
   render() {
@@ -58,5 +59,6 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     margin: 5,
+    marginBottom: 0,
   }
 });
