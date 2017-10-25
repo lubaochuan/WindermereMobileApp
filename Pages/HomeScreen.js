@@ -19,26 +19,14 @@ export class HomeScreen extends React.Component {
   render() {
     const { navigate } = this.props.navigation;
     return (
-      <View>
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            onPress= {() => navigate('Profile')}>
+      <View style={styles.buttonContainer}>
+        <TouchableHighlight
+          onPress= {() => navigate('Profile')}>
 
-            <View style={styles.button}>
-              <Text style={styles.buttonText}>Go to Profile</Text>
-            </View>
-          </TouchableHighlight>
-        </View>
-
-        <View style={styles.buttonContainer}>
-          <TouchableHighlight
-            onPress= {() => navigate('Page3')}>
-
-            <View style={styles.button}>
-              <Text style={styles.buttonText}>Go to Page 3</Text>
-            </View>
-          </TouchableHighlight>
-        </View>
+          <View style={styles.button}>
+            <Text style={styles.buttonText}>Go to Profile</Text>
+          </View>
+        </TouchableHighlight>
       </View>
     );
   }

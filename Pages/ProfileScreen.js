@@ -15,12 +15,8 @@ export class ProfileScreen extends React.Component {
   render() {
     const {navigate} = this.props.navigation;
     return (
-      <View>
-        <Text>Profile Page</Text>
-        <Button
-          title='Go to Page 3'
-          onPress={() => navigate('Page3')}
-        />
+      <View style={styles.container}>
+        <Text style={styles.text}>Profile Page</Text>
       </View>
     );
   }
@@ -29,5 +25,11 @@ export class ProfileScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center'
   },
+  text: {
+    fontSize: 30,
+    color: 'grey'
+  }
 });

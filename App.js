@@ -7,14 +7,14 @@ import {StackNavigator} from 'react-navigation';
 import {SplashScreen} from './Pages/SplashScreen.js';
 import {HomeScreen} from './Pages/HomeScreen.js';
 import {ProfileScreen} from './Pages/ProfileScreen.js';
-import {Page3} from './Pages/Page3.js'
+import {Page3} from './Pages/Page3.js';
 
 
 const AppDriver = StackNavigator({
   SplashScreen: { screen: SplashScreen },
   Home: { screen: HomeScreen },
   Profile: { screen: ProfileScreen },
-  Page3: { screen: Page3 },
+  //Page3: { screen: Page3 },
 });
 
 
