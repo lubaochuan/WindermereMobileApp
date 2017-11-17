@@ -13,6 +13,7 @@ import {AccommodationsScreen} from './Pages/AccommodationsScreen.js';
 import {RecreationsScreen} from './Pages/RecreationsScreen.js';
 
 
+//Current most top-level navigator
 const RootDrawer = DrawerNavigator({
   Home: {
     screen: HomeScreen,
@@ -55,6 +56,7 @@ const RootTabs = TabNavigator({
   },
 }, {
   animationEnabled: true,
+  tabBarPosition: 'bottom',
 });
 
 const RootStack = StackNavigator({
@@ -71,12 +73,11 @@ const RootStack = StackNavigator({
       gesturesEnabled: false,
     }
   },
-})
+});
 
 
-
-//export default RootTabs;
 export default RootStack;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
