@@ -1,22 +1,19 @@
-/* @flow */
-
 import React, { Component } from 'react';
 import {
   View,
   Text,
   StyleSheet,
-  Button
+  Button,
+  TouchableHighlight
 } from 'react-native';
-import {navOptions} from '../StyleSheets/NavigationOptionsObj.js';
 
-export class ProfileScreen extends React.Component {
-  static navigationOptions = navOptions('Profile', true);
 
+
+export class MapScreen extends React.Component {
   render() {
-    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Profile Page</Text>
+        <Text style={styles.text}>Map Page</Text>
       </View>
     );
   }
