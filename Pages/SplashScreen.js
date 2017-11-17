@@ -9,19 +9,16 @@ import {
 } from 'react-native';
 
 export class SplashScreen extends React.Component {
-  static navigationOptions = {
-    header: null,
-  };
-
 
   render() {
     const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
-        <TouchableHighlight
-          onPress={() => navigate('Home')}>
-          <View>
+      <TouchableHighlight
+        onPress={() => navigate('Home')}>
+          <View style={styles.textContainer}>
             <Text style={styles.text}>SPLASH PAGE</Text>
+            <Text>Press to Continue</Text>
           </View>
         </TouchableHighlight>
       </View>
@@ -34,6 +31,9 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  textContainer: {
+    alignItems: 'center',
   },
   text: {
     color: 'grey',
