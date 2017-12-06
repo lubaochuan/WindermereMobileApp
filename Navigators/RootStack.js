@@ -37,4 +37,19 @@ export const RootStack = StackNavigator({
       title: 'Contact Us'
     }
   }
-});
+},{
+  navigationOptions: {
+    headerStyle: {
+      backgroundColor: 'grey',
+    },
+    headerTitleStyle: {
+      fontSize: 20,
+    },
+    headerTintColor: 'white',
+    headerBackTitleStyle: {
+      fontSize: 20,
+    }
+  }
+}
+
+);

@@ -11,12 +11,14 @@ export const RootTabs = TabNavigator({
     screen: RootStack,
     navigationOptions: {
       tabBarLabel: 'Home',
+      swipeEnabled: false,
     },
   },
   Map: {
     screen: MapScreen,
     navigationOptions: {
       tabBarLabel: 'Map',
+      swipeEnabled: false,
     },
   },
 }, {
