@@ -20,7 +20,7 @@ export class THButton extends React.Component {
 
 const styles = StyleSheet.create({
   buttonContainer: {
-    width: '95%',
+    width: '98%',
     margin:5,
     backgroundColor: 'grey',
   },
