@@ -1,5 +1,13 @@
 import React, {Component} from 'react';
-import { View, Text, StyleSheet, Button, TouchableHighlight, Image } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Button,
+  TouchableHighlight,
+  TouchableOpacity,
+  Image
+} from 'react-native';
 
 export class THButton extends React.Component {
 
@@ -7,12 +15,12 @@ export class THButton extends React.Component {
   render(){
     return (
       <View style={styles.buttonContainer}>
-        <TouchableHighlight
+        <TouchableOpacity
           onPress={this.props.onPress}
           style={styles.highlight}
         >
           <Text style={styles.buttonText}>{this.props.title}</Text>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -22,10 +30,11 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: '98%',
     margin:5,
-    backgroundColor: 'grey',
+    backgroundColor: 'lightgrey',
   },
   highlight: {
     width: '100%',
+    backgroundColor: 'grey',
     alignItems: 'center',
   },
   buttonText: {
