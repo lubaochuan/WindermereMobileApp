@@ -34,6 +34,13 @@ export class HomeScreen extends React.Component {
           barStyle={'light-content'}
         />
         <View style={styles.body}>
+          <View style={styles.imageContainer}>
+            <Image
+              source={require('../assets/WinLogo.png')}
+              style={styles.logoImage}
+            />
+          </View>
+
           <THButton
             title='Dining'
             onPress={()=> navigate('Dining')}
@@ -73,5 +80,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  imageContainer: {
+    width: '80%',
+  },
+  logoImage: {
+    //marginBottom: 50,
+    resizeMode: 'contain',
+    width: '100%',
+    tintColor: 'grey',
+
+  }
 
 });
