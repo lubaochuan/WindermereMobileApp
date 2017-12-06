@@ -7,7 +7,8 @@ import {
   StyleSheet,
   Button,
   TouchableHighlight,
-  Image
+  Image,
+  StatusBar
 } from 'react-native';
 import {THButton} from '../Components/THButtons.js';
 
@@ -15,6 +16,13 @@ export class HomeScreen extends React.Component {
 
   static navigationOptions = {
     title: 'Home',
+    headerStyle: {
+      backgroundColor: 'grey'
+    },
+    headerTitleStyle: {
+      fontSize: 20,
+      color: 'white'
+    }
   };
 
   render() {
@@ -22,6 +30,9 @@ export class HomeScreen extends React.Component {
 
     return (
       <View style={styles.container}>
+        <StatusBar
+          barStyle={'light-content'}
+        />
         <View style={styles.body}>
           <THButton
             title='Dining'
