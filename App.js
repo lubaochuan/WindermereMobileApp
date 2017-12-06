@@ -43,7 +43,9 @@ const RootStack = StackNavigator({
       title: 'Contact Us'
     }
   }
-});
+}
+
+);
 
 const RootTabs = TabNavigator({
   Home: {
@@ -62,6 +64,10 @@ const RootTabs = TabNavigator({
   animationEnabled: true,
   tabBarPosition: 'bottom',
   tabBarOptions: {
+    activeTintColor: 'white',
+    activeBackgroundColor: 'grey',
+    inactiveTintColor: 'grey',
+    inactiveBackgroundColor: 'white',
     labelStyle: {
       fontSize: 20,
     },
