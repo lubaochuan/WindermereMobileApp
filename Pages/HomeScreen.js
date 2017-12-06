@@ -9,18 +9,36 @@ import {
   TouchableHighlight,
   Image
 } from 'react-native';
-
-import {PageHeader} from '../Components/PageHeader.js';
+import {THButton} from '../Components/THButtons.js';
 
 export class HomeScreen extends React.Component {
 
+  static navigationOptions = {
+    title: 'Home',
+  };
+
   render() {
     const {navigate} = this.props.navigation;
+
     return (
       <View style={styles.container}>
-        <PageHeader onPress={() => navigate('DrawerToggle')}/>
         <View style={styles.body}>
-          <Text style={styles.text}>Home Page</Text>
+          <THButton
+            title='Dining'
+            onPress={()=> navigate('Dining')}
+          />
+          <THButton
+            title='Accommodations'
+            onPress={()=> navigate('Accommodations')}
+          />
+          <THButton
+            title='Recreation'
+            onPress={()=> navigate('Recreation')}
+          />
+          <THButton
+            title='Contact Us'
+            onPress={()=>navigate('Contact')}
+          />
         </View>
       </View>
     );
@@ -29,6 +47,7 @@ export class HomeScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     flex: 1,
     alignItems: 'center',
     //justifyContent: 'center'
@@ -38,8 +57,10 @@ const styles = StyleSheet.create({
     color: 'grey'
   },
   body: {
+    width: '100%',
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
   },
 
 });

@@ -16,7 +16,6 @@ export class AccommodationsScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return(
       <View style={styles.container}>
-        <PageHeader onPress={() => navigate('DrawerToggle')}/>
         <View style={styles.body}>
           <Text style={styles.text}>Accommodations</Text>
         </View>

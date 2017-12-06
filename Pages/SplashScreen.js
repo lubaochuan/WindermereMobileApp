@@ -16,13 +16,16 @@ export class SplashScreen extends React.Component {
     const {navigate} = this.props.navigation;
 
     //use this as the navigation so the user cannot navigate back to the splash screen
+    //onPress={() => this.props.navigation.dispatch(resetAction)}
+    //onPress={()=> navigate('RootTabs')}
+
     const resetAction = NavigationActions.reset({
       index: 0,
       actions: [
-        NavigationActions.navigate({ routeName: 'Home' })
-      ]
+        NavigationActions.navigate({ routeName: 'RootTabs'}),
+      ],
     });
-    
+
 
     return (
       <View style={styles.container}>

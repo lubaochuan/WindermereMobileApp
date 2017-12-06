@@ -11,39 +11,43 @@ import {MapScreen} from './Pages/MapScreen.js';
 import {DiningHallScreen} from './Pages/DiningHallScreen.js';
 import {AccommodationsScreen} from './Pages/AccommodationsScreen.js';
 import {RecreationsScreen} from './Pages/RecreationsScreen.js';
+import {ContactUsScreen} from './Pages/ContactUsScreen.js';
 
 
 //Current most top-level navigator
-const RootDrawer = DrawerNavigator({
+const RootStack = StackNavigator({
   Home: {
     screen: HomeScreen,
-    navigationOptions: {
-      drawerLabel: 'Home',
-    },
   },
   Dining: {
     screen: DiningHallScreen,
     navigationOptions: {
-      drawerLabel: 'Dining',
-    },
+      title: 'Dining'
+    }
   },
   Accommodations: {
     screen: AccommodationsScreen,
     navigationOptions: {
-      drawerLabel: 'Accommodations',
+      title: 'Accommodations'
     }
   },
   Recreation: {
     screen: RecreationsScreen,
     navigationOptions: {
-      drawerLabel: 'Recreation'
+      title: 'Recreation'
     }
   },
+  Contact: {
+    screen: ContactUsScreen,
+    navigationOptions: {
+      title: 'Contact Us'
+    }
+  }
 });
 
 const RootTabs = TabNavigator({
   Home: {
-    screen: RootDrawer,
+    screen: RootStack,
     navigationOptions: {
       tabBarLabel: 'Home',
     },
@@ -57,16 +61,21 @@ const RootTabs = TabNavigator({
 }, {
   animationEnabled: true,
   tabBarPosition: 'bottom',
+  tabBarOptions: {
+    labelStyle: {
+      fontSize: 20,
+    },
+  }
 });
 
-const RootStack = StackNavigator({
+const SplashStack = StackNavigator({
   Splash: {
     screen: SplashScreen,
     navigationOptions: {
       header: null,
     }
   },
-  Home: {
+  RootTabs: {
     screen: RootTabs,
     navigationOptions: {
       header: null,
@@ -76,7 +85,7 @@ const RootStack = StackNavigator({
 });
 
 
-export default RootStack;
+export default SplashStack;
 
 const styles = StyleSheet.create({
   container: {
