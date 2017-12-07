@@ -10,7 +10,7 @@ export const RootTabs = TabNavigator({
   Home: {
     screen: RootStack,
     navigationOptions: {
-      tabBarLabel: 'Home',
+      tabBarLabel: 'Info',
       swipeEnabled: false,
     },
   },
