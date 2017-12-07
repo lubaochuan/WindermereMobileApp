@@ -9,7 +9,7 @@ import {
   Image
 } from 'react-native';
 
-export class THButton extends React.Component {
+export class TOButton extends React.Component {
 
 
   render(){

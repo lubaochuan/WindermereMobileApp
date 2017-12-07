@@ -3,22 +3,36 @@ import {
   View,
   Text,
   StyleSheet,
-  Button,
-  TouchableHighlight,
-  Image
+  FlatList,
+  Image,
 } from 'react-native';
 
-import {PageHeader} from '../Components/PageHeader.js';
+import {TOButton} from '../Components/TOButtons.js';
+import {recreations} from '../data/RecData.js';
 
 export class RecreationsScreen extends React.Component {
-  
+
   render() {
     const {navigate} = this.props.navigation;
+    //params = recreations.activities[0];
 
     return(
       <View style={styles.container}>
+
         <View style={styles.body}>
-          <Text style={styles.text}>Recreational Activities</Text>
+
+          <Text style={styles.text}>Activities</Text>
+
+          <FlatList
+            style={{width: '100%'}}
+            data={recreations.activities}
+            renderItem={
+              ({item}) => <TOButton
+              title={item.key}
+              onPress={()=>navigate('RecDetail', item)}
+              />
+            }
+          />
         </View>
       </View>
     );
@@ -27,15 +41,28 @@ export class RecreationsScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     flex: 1,
     alignItems: 'center',
   },
-  body: {
-    flex: 1,
-    justifyContent: 'center',
-  },
   text: {
     fontSize: 30,
-    color: 'grey'
+    color: 'grey',
+    margin: 30,
   },
+  body: {
+    width: '100%',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  imageContainer: {
+    width: '80%',
+  },
+  logoImage: {
+    //marginBottom: 50,
+    resizeMode: 'contain',
+    width: '100%',
+    tintColor: 'grey',
+  }
 })

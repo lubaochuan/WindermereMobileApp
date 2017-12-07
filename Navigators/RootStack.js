@@ -7,6 +7,7 @@ import {DiningHallScreen} from '../Pages/DiningHallScreen.js';
 import {AccommodationsScreen} from '../Pages/AccommodationsScreen.js';
 import {RecreationsScreen} from '../Pages/RecreationsScreen.js';
 import {ContactUsScreen} from '../Pages/ContactUsScreen.js';
+import {RecDetailScreen} from '../Pages/RecDetailScreen.js';
 
 
 export const RootStack = StackNavigator({
@@ -30,6 +31,9 @@ export const RootStack = StackNavigator({
     navigationOptions: {
       title: 'Recreation'
     }
+  },
+  RecDetail: {
+    screen: RecDetailScreen,
   },
   Contact: {
     screen: ContactUsScreen,

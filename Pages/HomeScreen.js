@@ -10,7 +10,7 @@ import {
   Image,
   StatusBar
 } from 'react-native';
-import {THButton} from '../Components/THButtons.js';
+import {TOButton} from '../Components/TOButtons.js';
 
 export class HomeScreen extends React.Component {
 
@@ -41,19 +41,19 @@ export class HomeScreen extends React.Component {
             />
           </View>
 
-          <THButton
+          <TOButton
+          title='Accommodations'
+          onPress={()=> navigate('Accommodations')}
+          />
+          <TOButton
             title='Dining'
             onPress={()=> navigate('Dining')}
           />
-          <THButton
-            title='Accommodations'
-            onPress={()=> navigate('Accommodations')}
-          />
-          <THButton
+          <TOButton
             title='Recreation'
             onPress={()=> navigate('Recreation')}
           />
-          <THButton
+          <TOButton
             title='Contact Us'
             onPress={()=>navigate('Contact')}
           />
@@ -88,7 +88,6 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     width: '100%',
     tintColor: 'grey',
-
   }
 
 });

@@ -8,8 +8,6 @@ import {
   Image
 } from 'react-native';
 
-import {PageHeader} from '../Components/PageHeader.js';
-
 export class DiningHallScreen extends React.Component {
 
   render() {
