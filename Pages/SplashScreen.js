@@ -19,10 +19,10 @@ export class SplashScreen extends React.Component {
     const resetAction = NavigationActions.reset({
       index: 0,
       actions: [
-        NavigationActions.navigate({ routeName: 'Home' })
+        NavigationActions.navigate({ routeName: 'RootTabs' })
       ]
     });
-    
+
 
     return (
       <View style={styles.container}>

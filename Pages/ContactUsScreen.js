@@ -8,16 +8,14 @@ import {
   Image
 } from 'react-native';
 
-import {PageHeader} from '../Components/PageHeader.js';
-
-export class AccommodationsScreen extends React.Component {
+export class ContactUsScreen extends React.Component {
 
   render() {
     const {navigate} = this.props.navigation;
     return(
       <View style={styles.container}>
         <View style={styles.body}>
-          <Text style={styles.text}>Accommodations</Text>
+          <Text style={styles.text}>Contact Us</Text>
         </View>
       </View>
     );
