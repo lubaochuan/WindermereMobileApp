@@ -25,10 +25,10 @@ export const RootTabs = TabNavigator({
   animationEnabled: true,
   tabBarPosition: 'bottom',
   tabBarOptions: {
-    activeTintColor: 'white',
-    activeBackgroundColor: 'grey',
-    inactiveTintColor: 'grey',
-    inactiveBackgroundColor: 'white',
+    activeTintColor: 'grey',
+    activeBackgroundColor: 'white',
+    inactiveTintColor: 'white',
+    inactiveBackgroundColor: 'grey',
     labelStyle: {
       fontSize: 20,
     },
