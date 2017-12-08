@@ -10,11 +10,13 @@ import {
 import {TOButton} from '../Components/TOButtons.js';
 import {recreations} from '../data/RecData.js';
 
+
+//This is the Recreations Page.  It display all the available recreation events available on campus.
+//The list of events is pulled from the RecData.js object 'recreations'.
 export class RecreationsScreen extends React.Component {
 
   render() {
     const {navigate} = this.props.navigation;
-    //params = recreations.activities[0];
 
     return(
       <View style={styles.container}>

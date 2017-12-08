@@ -5,11 +5,14 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableHighlight
+  TouchableOpacity,
+  Image,
+  StatusBar
 } from 'react-native';
 
 import {NavigationActions} from 'react-navigation';
 
+//Placeholder splash screen page.
 export class SplashScreen extends React.Component {
 
   render() {
@@ -26,13 +29,22 @@ export class SplashScreen extends React.Component {
 
     return (
       <View style={styles.container}>
-      <TouchableHighlight
+      <StatusBar
+        barStyle={'dark-content'}
+      />
+      <TouchableOpacity style={styles.highlight}
         onPress={() => this.props.navigation.dispatch(resetAction)}>
           <View style={styles.textContainer}>
-            <Text style={styles.text}>SPLASH PAGE</Text>
-            <Text>Press to Continue</Text>
+            <Text style={styles.text}>Welcome to</Text>
+            <View style={styles.imageContainer}>
+              <Image
+                source={require('../assets/WinLogo.png')}
+                style={styles.logoImage}
+              />
+            </View>
+            <Text style={styles.smalltext}>Press to Continue</Text>
           </View>
-        </TouchableHighlight>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -40,15 +52,32 @@ export class SplashScreen extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
   },
+  highlight: {
+    width: '100%'
+  },
   textContainer: {
     alignItems: 'center',
+    width: '100%',
   },
   text: {
     color: 'grey',
     fontSize: 30,
+  },
+  smalltext: {
+    color: 'grey'
+  },
+  imageContainer: {
+    width: '80%',
+  },
+  logoImage: {
+    //marginBottom: 50,
+    resizeMode: 'contain',
+    width: '100%',
+    tintColor: 'grey',
   }
 });

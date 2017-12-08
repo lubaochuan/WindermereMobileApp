@@ -4,6 +4,8 @@ import {StackNavigator} from 'react-navigation';
 import {SplashScreen} from '../Pages/SplashScreen.js';
 import {RootTabs} from './RootTabs.js';
 
+
+//Stack that only exists to simulate a splash screen. Unlcear if this will remain as the source of our splash screen.
 export const SplashStack = StackNavigator({
   Splash: {
     screen: SplashScreen,

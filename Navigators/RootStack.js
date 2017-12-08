@@ -10,6 +10,7 @@ import {ContactUsScreen} from '../Pages/ContactUsScreen.js';
 import {RecDetailScreen} from '../Pages/RecDetailScreen.js';
 
 
+//StackNavigator that contains most of the pages of the application.
 export const RootStack = StackNavigator({
   Home: {
     screen: HomeScreen,
@@ -42,6 +43,8 @@ export const RootStack = StackNavigator({
     }
   }
 },{
+  //This is configuring shared attributes of all pages in the StackNavigator.
+  //Specifically, the header.
   navigationOptions: {
     headerStyle: {
       backgroundColor: 'grey',

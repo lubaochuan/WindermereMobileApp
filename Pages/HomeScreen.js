@@ -8,10 +8,14 @@ import {
   Button,
   TouchableHighlight,
   Image,
-  StatusBar
+  StatusBar,
+  FlatList
 } from 'react-native';
 import {TOButton} from '../Components/TOButtons.js';
 
+//Current Home page.
+//Contains buttons to other pages/page groups in stacks.
+//Available pages should be along the lines of a kind of 'quick access' pages.
 export class HomeScreen extends React.Component {
 
   static navigationOptions = {
@@ -25,6 +29,8 @@ export class HomeScreen extends React.Component {
     }
   };
 
+  //Renders Windermere Logo, then
+  //Renders Buttons to pages and page-groups.s
   render() {
     const {navigate} = this.props.navigation;
 
@@ -41,22 +47,34 @@ export class HomeScreen extends React.Component {
             />
           </View>
 
-          <TOButton
-          title='Accommodations'
-          onPress={()=> navigate('Accommodations')}
+          <FlatList
+            style={{width: '100%'}}
+            data={[
+              {
+                key: 'Accommodations',
+                nav: 'Accommodations'
+              },
+              {
+                key: 'Dining',
+                nav: 'Dining'
+              },
+              {
+                key: 'Recreation',
+                nav: 'Recreation'
+              },
+              {
+                key: 'Contact Us',
+                nav: 'Contact'
+              }
+            ]}
+            renderItem={
+              ({item}) => <TOButton
+              title={item.key}
+              onPress={()=>navigate(item.nav)}
+              />
+            }
           />
-          <TOButton
-            title='Dining'
-            onPress={()=> navigate('Dining')}
-          />
-          <TOButton
-            title='Recreation'
-            onPress={()=> navigate('Recreation')}
-          />
-          <TOButton
-            title='Contact Us'
-            onPress={()=>navigate('Contact')}
-          />
+          
         </View>
       </View>
     );

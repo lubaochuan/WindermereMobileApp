@@ -6,6 +6,8 @@ import {MapScreen} from '../Pages/MapScreen.js';
 import {RootStack} from './RootStack.js';
 
 
+//TabNavigator that contains the RootStack and the Map page.
+//Later, will likely replace map page with a StackNavigator with the map page included.
 export const RootTabs = TabNavigator({
   Home: {
     screen: RootStack,
@@ -22,6 +24,7 @@ export const RootTabs = TabNavigator({
     },
   },
 }, {
+  //Styling for the tab bar and it's children components.
   animationEnabled: true,
   tabBarPosition: 'bottom',
   tabBarOptions: {
