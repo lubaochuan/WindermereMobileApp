@@ -9,8 +9,11 @@ import {
   Image
 } from 'react-native';
 
-export class TOButton extends React.Component {
+//This is a simple component that returns a TouchableOpacity with a Text inside.
+//onPress function and Text content is passed in through props of TOButton.
 
+//T_ouchable_O_pacity_Button
+export class TOButton extends React.Component {
 
   render(){
     return (

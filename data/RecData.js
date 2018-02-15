@@ -1,5 +1,7 @@
 import React from 'react';
 
+
+//Data object to use in the Recreation list.
 export const recreations = {
   activities: [
     {

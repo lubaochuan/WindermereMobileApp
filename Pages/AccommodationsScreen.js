@@ -8,8 +8,8 @@ import {
   Image
 } from 'react-native';
 
-import {PageHeader} from '../Components/PageHeader.js';
 
+//Placeholder for Accommodations Screen.
 export class AccommodationsScreen extends React.Component {
 
   render() {

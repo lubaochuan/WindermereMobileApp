@@ -8,6 +8,7 @@ import {
   Image
 } from 'react-native';
 
+//Placeholder for Contact Us Screen.
 export class ContactUsScreen extends React.Component {
 
   render() {

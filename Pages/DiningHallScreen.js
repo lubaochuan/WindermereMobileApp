@@ -8,6 +8,7 @@ import {
   Image
 } from 'react-native';
 
+//Placeholder for Dining screen.
 export class DiningHallScreen extends React.Component {
 
   render() {
