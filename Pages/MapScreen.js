@@ -17,30 +17,41 @@ import { MapView } from 'expo';
 //const screenHeight = Dimensions.get('window').height;
 
 export class MapScreen extends React.Component {
-/*
-  render() {
-    return (
-      <View style={styles.container}>
-        <Image
-          style={styles.mapImage}
-          source={require('../assets/map.jpg')}
-        />
-      </View>
-    );
+
+  constructor() {
+    super();
+
+    this.state = {
+      region: {
+        latitude: 38.0326914,
+        longitude: -92.8380096,
+        latitudeDelta: 0.0080,
+        longitudeDelta: 0.0080,
+      },
+    };
   }
-*/
+
   render() {
     return (
-      <MapView
-        style={{ flex: 1 }}
-        region={{
-          latitude: 38.0326914,
-          longitude: -92.8380096,
-          latitudeDelta: 0.0080,
-          longitudeDelta: 0.0080,
-        }}
-        mapType="hybrid"
-      />
+      <View style={{flex:1}}>
+        <MapView
+          style={{flex: 1}}
+          mapType='hybrid'
+          region={this.state.region}
+          onRegionChange={ region => this.setState({region}) }
+          onRegionChangeComplete={ region => this.setState({region}) }
+        >
+          <MapView.Marker
+            title='Marker'
+            description="I'm a marker! Neat!"
+            coordinate={ this.state.region }
+          />
+        </MapView>
+        <Text>Lat: {this.state.region.latitude}</Text>
+        <Text>Long: {this.state.region.longitude}</Text>
+        <Text>dLat: {this.state.region.latitudeDelta}</Text>
+        <Text>dLong: {this.state.region.longitudeDelta}</Text>
+      </View>
     );
   }
 
