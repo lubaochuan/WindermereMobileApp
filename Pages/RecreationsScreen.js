@@ -8,7 +8,8 @@ import {
 } from 'react-native';
 
 import {TOButton} from '../Components/TOButtons.js';
-import {recreations} from '../data/RecData.js';
+import {data} from '../data/data.js';
+//import {recreations} from '../data/RecData.js';
 
 
 //This is the Recreations Page.  It display all the available recreation events available on campus.
@@ -27,7 +28,7 @@ export class RecreationsScreen extends React.Component {
 
           <FlatList
             style={{width: '100%'}}
-            data={recreations.activities}
+            data={data.recPages}
             renderItem={
               ({item}) => <TOButton
               title={item.key}

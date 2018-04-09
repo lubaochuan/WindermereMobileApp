@@ -78,6 +78,6 @@ const styles = StyleSheet.create({
     //marginBottom: 50,
     resizeMode: 'contain',
     width: '100%',
-    tintColor: 'grey',
+    //tintColor: 'grey',
   }
 });

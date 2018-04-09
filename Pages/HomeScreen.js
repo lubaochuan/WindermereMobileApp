@@ -74,7 +74,7 @@ export class HomeScreen extends React.Component {
               />
             }
           />
-          
+
         </View>
       </View>
     );
@@ -105,7 +105,7 @@ const styles = StyleSheet.create({
     //marginBottom: 50,
     resizeMode: 'contain',
     width: '100%',
-    tintColor: 'grey',
+    //tintColor: 'grey',
   }
 
 });

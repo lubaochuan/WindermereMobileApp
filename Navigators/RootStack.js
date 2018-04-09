@@ -8,6 +8,7 @@ import {AccommodationsScreen} from '../Pages/AccommodationsScreen.js';
 import {RecreationsScreen} from '../Pages/RecreationsScreen.js';
 import {ContactUsScreen} from '../Pages/ContactUsScreen.js';
 import {RecDetailScreen} from '../Pages/RecDetailScreen.js';
+import {SingleMapScreen} from '../Pages/SingleMapScreen.js';
 
 
 //StackNavigator that contains most of the pages of the application.
@@ -41,7 +42,15 @@ export const RootStack = StackNavigator({
     navigationOptions: {
       title: 'Contact Us'
     }
+  },
+  SingleMap: {
+    screen: SingleMapScreen,
+    navigationOptions: {
+      title: 'Map'
+    }
   }
+
+
 },{
   //This is configuring shared attributes of all pages in the StackNavigator.
   //Specifically, the header.

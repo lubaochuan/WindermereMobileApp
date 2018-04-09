@@ -6,9 +6,11 @@ import {
   Button,
   TouchableHighlight,
   Image,
-  Dimensions
+  Dimensions,
+  Animated
 } from 'react-native';
 import { MapView } from 'expo';
+import { data } from '../data/data.js';
 
 //Will contain the interactive map, eventually.
 //Currently contains a static placeholder image of the windermere campus.
@@ -22,6 +24,37 @@ export class MapScreen extends React.Component {
     super();
 
     this.state = {
+      markers: [
+        {
+          title: "Start Point",
+          description: "This is the starting point",
+          coordinate: {
+            latitude: 38.0326914,
+            longitude: -92.8380096,
+            latitudeDelta: 0.0080,
+            longitudeDelta: 0.0080,
+          },
+          pinColor: 'red',
+        },
+        {
+          title: "Other Point",
+          description: "This is another point",
+          coordinate: {
+            latitude: 38.0316914,
+            longitude: -92.8370096,
+          },
+          pinColor: 'red',
+        },
+        {
+          title: "The Splash",
+          description: "The Splash",
+          coordinate: {
+            latitude: 38.0334189,
+            longitude: -92.8365549,
+          },
+          pinColor: 'red',
+        },
+      ],
       region: {
         latitude: 38.0326914,
         longitude: -92.8380096,
@@ -31,26 +64,48 @@ export class MapScreen extends React.Component {
     };
   }
 
+
   render() {
+    const {navigate} = this.props.navigation;
+
     return (
       <View style={{flex:1}}>
         <MapView
+          ref={map => this.map = map}
+          initialRegion={this.state.region}
           style={{flex: 1}}
           mapType='hybrid'
-          region={this.state.region}
           onRegionChange={ region => this.setState({region}) }
           onRegionChangeComplete={ region => this.setState({region}) }
         >
           <MapView.Marker
-            title='Marker'
-            description="I'm a marker! Neat!"
-            coordinate={ this.state.region }
+            coordinate={this.state.region}
+            pinColor={'blue'}
           />
+          {this.state.markers.map((marker, index) => {
+            return (
+              <MapView.Marker
+                key={index}
+                coordinate={marker.coordinate}
+                title={marker.title}
+                description={marker.description}
+                pinColor={marker.pinColor}
+              >
+
+              </MapView.Marker>
+            );
+          })}
+
         </MapView>
+        <Button
+          title={"Reset"}
+          onPress={()=>{this.map.animateToRegion(this.state.markers[0].coordinate, 500)}}
+        />
         <Text>Lat: {this.state.region.latitude}</Text>
         <Text>Long: {this.state.region.longitude}</Text>
         <Text>dLat: {this.state.region.latitudeDelta}</Text>
         <Text>dLong: {this.state.region.longitudeDelta}</Text>
+
       </View>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import {TOButton} from '../Components/TOButtons.js';
 
 //This is a screen component that takes in a data object as a prop,
 //and uses this prop for page title and details on screen.
@@ -14,9 +15,14 @@ export class RecDetailScreen extends React.Component {
 
   render(){
     const {params} = this.props.navigation.state;
+    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
         <Text style={styles.text}>{params.detail}</Text>
+        <TOButton
+          title={'Show ' + params.key + ' on map'}
+          onPress={()=>navigate('SingleMap', params.coordinate)}
+        />
       </View>
     );
   }
