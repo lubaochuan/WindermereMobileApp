@@ -33,6 +33,7 @@ export class SingleMapScreen extends React.Component {
           }}
           style={{flex: 1}}
           mapType='hybrid'
+          showsUserLocation={true}
         >
           <MapView.Marker
             coordinate={{

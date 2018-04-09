@@ -73,6 +73,7 @@ export class MapScreen extends React.Component {
         <MapView
           ref={map => this.map = map}
           initialRegion={this.state.region}
+          showsUserLocation={true}
           style={{flex: 1}}
           mapType='hybrid'
           onRegionChange={ region => this.setState({region}) }
