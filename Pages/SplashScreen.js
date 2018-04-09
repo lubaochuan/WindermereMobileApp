@@ -42,7 +42,7 @@ export class SplashScreen extends React.Component {
                 style={styles.logoImage}
               />
             </View>
-            <Text style={styles.smalltext}>Press to Continue</Text>
+            <Text style={styles.smalltext}>Tap to Continue</Text>
           </View>
         </TouchableOpacity>
       </View>
