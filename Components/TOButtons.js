@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     fontSize: 30,
+    fontFamily: 'ArialHebrew-Light',
     margin: 10,
   }
 });

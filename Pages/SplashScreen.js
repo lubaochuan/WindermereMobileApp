@@ -66,7 +66,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'black',
-    fontSize: 30,
+    fontSize: 50,
+    fontFamily: 'Baskerville',
   },
   smalltext: {
     color: 'black'

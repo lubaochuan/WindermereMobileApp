@@ -64,6 +64,7 @@ export const RootStack = StackNavigator({
     headerTintColor: 'white',
     headerBackTitleStyle: {
       fontSize: 20,
+    fontFamily: 'ArialHebrew-Light',
     }
   }
 }

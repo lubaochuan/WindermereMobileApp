@@ -24,7 +24,7 @@ export class RecreationsScreen extends React.Component {
 
         <View style={styles.body}>
 
-          <Text style={styles.text}>Activities</Text>
+         <Text style={styles.text}>Activities</Text>
 
           <FlatList
             style={{width: '100%'}}
@@ -51,11 +51,13 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 30,
     color: 'black',
+    fontFamily: 'ArialHebrew-Light',
     margin: 30,
   },
   body: {
     width: '100%',
     flex: 1,
+    margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
   },

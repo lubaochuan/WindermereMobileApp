@@ -35,7 +35,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 30,
-    color: 'black'
+    fontSize: 23,
+    margin: 10,
+    textAlign: 'center',
+    fontFamily: 'Arial',
   }
 });

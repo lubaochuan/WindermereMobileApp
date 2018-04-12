@@ -33,7 +33,8 @@ export const RootTabs = TabNavigator({
     inactiveTintColor: 'white',
     inactiveBackgroundColor: '#2C4500',
     labelStyle: {
-      fontSize: 20,
+      fontSize: 25,
+    fontFamily: 'ArialHebrew-Light',
     },
   }
 });
