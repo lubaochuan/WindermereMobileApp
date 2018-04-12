@@ -56,7 +56,7 @@ export const RootStack = StackNavigator({
   //Specifically, the header.
   navigationOptions: {
     headerStyle: {
-      backgroundColor: 'grey',
+      backgroundColor: '#2C4500',
     },
     headerTitleStyle: {
       fontSize: 20,

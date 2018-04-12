@@ -65,11 +65,11 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   text: {
-    color: 'grey',
+    color: 'black',
     fontSize: 30,
   },
   smalltext: {
-    color: 'grey'
+    color: 'black'
   },
   imageContainer: {
     width: '80%',

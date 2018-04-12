@@ -21,7 +21,7 @@ export class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
     headerStyle: {
-      backgroundColor: 'grey'
+      backgroundColor: '#2C4500'
     },
     headerTitleStyle: {
       fontSize: 20,

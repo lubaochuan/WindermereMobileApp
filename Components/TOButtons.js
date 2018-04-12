@@ -33,11 +33,11 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: '98%',
     margin:5,
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'grey',
   },
   highlight: {
     width: '100%',
-    backgroundColor: 'grey',
+    backgroundColor: '#2C4500',
     alignItems: 'center',
   },
   buttonText: {
