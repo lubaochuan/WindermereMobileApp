@@ -6,12 +6,12 @@ export const data = {
   recPages: [
     {
       key: 'The Cave',
-      imageUrl: "assets\cave.jpg",
+      imageUrl: "assets/cave.jpg",
       detail: 'WHEN: \nMonday - Saturday* \n\nWHERE: \nMeet at the entrance of the cave \n\nHOW: \nSchedule and purchase tickets at Front Desk \n\nTIME: \nApproximately 90 minutes',
     },
     {
       key: 'The Edge',
-      detail: 'WHEN: \nMonday - Saturday* \n\nWHERE: \nRecreation Climbs meet 10 minutes before scheduled time at The Edge \n\nHOW: \nSchedule and purchase tickets at The Barn \n\nTIME: \nRecreation CLimbs are 1 hour long',
+      detail: 'WHEN: \nMonday - Saturday* \n\nWHERE: \nRecreation Climbs meet 10 minutes before scheduled time at The Edge \n\nHOW: \nSchedule and purchase tickets at The Barn \n\nTIME: \nRecreation Climbs are 1 hour long',
       coordinate: {
         latitude: 38.0333826,
         longitude: -92.8508212,
@@ -39,6 +39,28 @@ export const data = {
       coordinate: {
         latitude: 38.0332049,
         longitude: -92.8356746,
+      },
+    },
+  ],
+
+  accomodationsPages: [
+    {
+      key: 'Deluxe Accommodations',
+      detail: 'Deluxe Placeholder',
+      coordinate: {
+
+      },
+
+      key: 'Standard Accommodations',
+      detail: 'StandRD Placeholder',
+      coordinate: {
+
+      },
+
+      key: 'Economy Accommodations',
+      detail: 'Economy Placeholder',
+      coordinate: {
+
       },
     },
   ]
