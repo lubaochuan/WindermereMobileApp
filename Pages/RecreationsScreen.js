@@ -25,7 +25,6 @@ export class RecreationsScreen extends React.Component {
         <View style={styles.body}>
 
          <Text style={styles.text}>Activities</Text>
-
           <FlatList
             style={{width: '100%'}}
             data={data.recPages}
@@ -33,6 +32,7 @@ export class RecreationsScreen extends React.Component {
               ({item}) => <TOButton
               title={item.key}
               onPress={()=>navigate('RecDetail', item)}
+
               />
             }
           />

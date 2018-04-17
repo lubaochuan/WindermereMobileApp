@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text, ScrollView, StyleSheet} from 'react-native';
 import {TOButton} from '../Components/TOButtons.js';
 
 //This is a screen component that takes in a data object as a prop,
@@ -18,11 +18,13 @@ export class RecDetailScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
+      <ScrollView>
         <Text style={styles.text}>{params.detail}</Text>
         <TOButton
           title={'Show ' + params.key + ' on map'}
           onPress={()=>navigate('SingleMap', params.coordinate)}
         />
+        </ScrollView>
       </View>
     );
   }
