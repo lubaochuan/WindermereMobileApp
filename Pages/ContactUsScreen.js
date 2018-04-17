@@ -16,7 +16,7 @@ export class ContactUsScreen extends React.Component {
     return(
       <View style={styles.container}>
         <View style={styles.body}>
-          <Text style={styles.text}>Contact Us</Text>
+          <Text style={styles.header}>Contact Us</Text>
           <Text style={styles.text}>Windermere Baptist Conference Center</Text>
           <Text style={styles.text}>P.O. Box 458 Roach, MO 65787</Text>
           <Text style={styles.text}>573-346-5200 - Local</Text>
@@ -31,13 +31,21 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center'
   },
   body: {
     flex: 1,
     justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
+    fontSize: 20,
+    margin: 1.5,
+    color: 'black',
+  },
+  header: {
     fontSize: 30,
-    color: 'black'
+    color: 'black',
+    fontWeight: 'bold',
   },
 })
