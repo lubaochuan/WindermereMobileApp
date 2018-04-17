@@ -52,7 +52,7 @@ export const data = {
       },
 
       key: 'Standard Accommodations',
-      detail: 'StandRD Placeholder',
+      detail: 'Standard Placeholder',
       coordinate: {
 
       },

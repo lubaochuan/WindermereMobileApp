@@ -17,6 +17,10 @@ export class ContactUsScreen extends React.Component {
       <View style={styles.container}>
         <View style={styles.body}>
           <Text style={styles.text}>Contact Us</Text>
+          <Text style={styles.text}>Windermere Baptist Conference Center</Text>
+          <Text style={styles.text}>P.O. Box 458 Roach, MO 65787</Text>
+          <Text style={styles.text}>573-346-5200 - Local</Text>
+          <Text style={styles.text}>sales@windermereusa.org</Text>
         </View>
       </View>
     );
