@@ -49,19 +49,15 @@ export const data = {
   accomodationsPages: [
     {
       key: 'Deluxe Accommodations',
-      detail: 'Deluxe Placeholder',
+      detail: 'Windermere offers a variety of accomodation options! Here are the list of our accomodation options! Contact us for more information.\n\nDeluxe\n\nStandard\n\nEconomy',
       coordinate: {
-
       },
-
-      key: 'Standard Accommodations',
-      detail: 'Standard Placeholder',
-      coordinate: {
-
-      },
-
-      key: 'Economy Accommodations',
-      detail: 'Economy Placeholder',
+    },
+  ],
+  diningPage: [
+    {
+      key: 'Dining',
+      detail: 'Dining Detail',
       coordinate: {
 
       },

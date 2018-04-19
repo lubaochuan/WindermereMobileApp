@@ -8,27 +8,17 @@ import {
   TouchableHighlight,
   Image
 } from 'react-native';
+import {data} from '../data/data.js';
 
 //Displays all information on dining
 //Pulls information from data.js
 export class DiningHallScreen extends React.Component {
 
   render() {
-    const {params} = this.props.navigation.state;
     return (
       <View style={styles.container}>
       <ScrollView>
-      <Text style={styles.text}>{params.detail}</Text>
-        <FlatList
-          style={{width: '100%'}}
-          data={data.diningPage}
-          renderItem={
-            ({item}) => <TOButton
-            title={item.key}
-            onPress={()=>navigate('DineDetail', item)}
-            />
-          }
-        />
+      <Text style={styles.text}>{data.diningPage[0].detail}</Text>
         </ScrollView>
       </View>
     );
