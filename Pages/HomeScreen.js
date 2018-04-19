@@ -66,6 +66,10 @@ export class HomeScreen extends React.Component {
               {
                 key: 'Contact Us',
                 nav: 'Contact'
+              },
+              {
+                key: 'Campus Map',
+                nav: 'Map'
               }
             ]}
             renderItem={
