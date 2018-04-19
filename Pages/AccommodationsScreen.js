@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
+  ScrollView,
   FlatList,
   Image,
 } from 'react-native';
@@ -18,11 +19,8 @@ export class AccommodationsScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return(
       <View style={styles.container}>
-
+      <ScrollView>
         <View style={styles.body}>
-
-          <Text style={styles.text}>Accommodations</Text>
-
           <FlatList
             style={{width: '100%'}}
             data={data.accommodationsPages}
@@ -34,6 +32,7 @@ export class AccommodationsScreen extends React.Component {
             }
           />
         </View>
+        </ScrollView>
       </View>
     );
   }

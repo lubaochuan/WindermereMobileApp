@@ -3,21 +3,33 @@ import {
   View,
   Text,
   StyleSheet,
+  ScrollView,
   Button,
   TouchableHighlight,
   Image
 } from 'react-native';
 
-//Placeholder for Dining screen.
+//Displays all information on dining
+//Pulls information from data.js
 export class DiningHallScreen extends React.Component {
 
   render() {
-    const {navigate} = this.props.navigation;
-    return(
+    const {params} = this.props.navigation.state;
+    return (
       <View style={styles.container}>
-        <View style={styles.body}>
-          <Text style={styles.text}>Dining Hall</Text>
-        </View>
+      <ScrollView>
+      <Text style={styles.text}>{params.detail}</Text>
+        <FlatList
+          style={{width: '100%'}}
+          data={data.diningPage}
+          renderItem={
+            ({item}) => <TOButton
+            title={item.key}
+            onPress={()=>navigate('DineDetail', item)}
+            />
+          }
+        />
+        </ScrollView>
       </View>
     );
   }
@@ -27,13 +39,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-  },
-  body: {
-    flex: 1,
     justifyContent: 'center',
   },
   text: {
-    fontSize: 30,
-    color: 'black'
-  },
-})
+    fontSize: 23,
+    margin: 10,
+    textAlign: 'center',
+    fontFamily: 'Arial',
+  }
+});

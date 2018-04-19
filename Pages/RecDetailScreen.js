@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, Text, ScrollView, StyleSheet} from 'react-native';
+import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
 import {TOButton} from '../Components/TOButtons.js';
 
 //This is a screen component that takes in a data object as a prop,
@@ -41,5 +41,9 @@ const styles = StyleSheet.create({
     margin: 10,
     textAlign: 'center',
     fontFamily: 'Arial',
-  }
+  },
+  image: {
+    width: '100%',
+    height: '100%',
+  },
 });

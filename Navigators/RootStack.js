@@ -9,6 +9,7 @@ import {RecreationsScreen} from '../Pages/RecreationsScreen.js';
 import {ContactUsScreen} from '../Pages/ContactUsScreen.js';
 import {RecDetailScreen} from '../Pages/RecDetailScreen.js';
 import {SingleMapScreen} from '../Pages/SingleMapScreen.js';
+import {MapScreen} from '../Pages/MapScreen.js';
 
 
 //StackNavigator that contains most of the pages of the application.
@@ -47,6 +48,12 @@ export const RootStack = StackNavigator({
     screen: SingleMapScreen,
     navigationOptions: {
       title: 'Map'
+    }
+  },
+  Map: {
+    screen: MapScreen,
+    navigationOptions: {
+      title: 'Campus Map'
     }
   }
 
