@@ -21,9 +21,16 @@ export class ContactUsScreen extends React.Component {
         source={require('../assets/contact.jpg')}
         />
       <ScrollView>
-      <Text style={styles.header}>{data.contactPage[0].header}</Text>
-      <Text style={styles.body}>{data.contactPage[0].body}</Text>
-        </ScrollView>
+        <Text style={styles.mainheader}>{data.contactPage[0].header}</Text>
+        <View style = {styles.lineStyle}/>
+        <Text style={styles.header}>{data.contactPage[0].addressheader}</Text>
+        <Text style={styles.body}>{data.contactPage[0].address}</Text>
+        <Text style={styles.header}>{data.contactPage[0].phoneheader}</Text>
+        <Text style={styles.body}>{data.contactPage[0].phone}</Text>
+        <Text style={styles.header}>{data.contactPage[0].emailheader}</Text>
+        <Text style={styles.body}>{data.contactPage[0].email}</Text>
+        <View style = {styles.lineStyle}/>
+      </ScrollView>
       </View>
     );
   }
@@ -35,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  header: {
+  mainheader: {
     fontSize: 30,
     margin: 10,
     textAlign: 'center',
@@ -44,9 +51,21 @@ const styles = StyleSheet.create({
     fontStyle: 'italic',
   },
   body: {
-    fontSize: 23,
+    fontSize: 20,
     margin: 10,
     textAlign: 'center',
     fontFamily: 'Arial',
+  },
+  header: {
+    fontSize: 25,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    fontFamily: 'Arial',
+    margin: 10,
+  },
+  lineStyle:{
+    borderWidth: 1,
+    borderColor: '#2C4500',
+    margin: 10,
   },
 });

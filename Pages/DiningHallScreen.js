@@ -23,9 +23,11 @@ export class DiningHallScreen extends React.Component {
         />
       <ScrollView>
       <Text style={styles.header}>{data.diningPage[0].header}</Text>
+      <View style = {styles.lineStyle}/>
       <Text style={styles.bodyheader}>{data.diningPage[0].header2}</Text>
       <Text style={styles.body1}>{data.diningPage[0].body1}</Text>
       <Text style={styles.smallprint}>{data.diningPage[0].smallprint}</Text>
+      <View style = {styles.lineStyle}/>
       <Text style={styles.bodyheader}>{data.diningPage[0].header3}</Text>
       <Text style={styles.body2}>{data.diningPage[0].body2}</Text>
       <Text style={styles.bodyheader}>{data.diningPage[0].header4}</Text>
@@ -77,5 +79,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Arial',
     textAlign: 'center',
     paddingLeft: 5,
+  },
+  lineStyle:{
+    borderWidth: 1,
+    borderColor: '#2C4500',
+    margin: 10,
   },
 });

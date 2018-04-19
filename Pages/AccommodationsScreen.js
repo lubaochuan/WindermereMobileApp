@@ -24,7 +24,9 @@ export class AccommodationsScreen extends React.Component {
         />
       <ScrollView>
       <Text style={styles.text}>{data.accomodationsPages[0].detail}</Text>
+      <View style = {styles.lineStyle}/>
       <Text style={styles.body}>{data.accomodationsPages[0].body}</Text>
+      <View style = {styles.lineStyle}/>
       <Text style={styles.text}>{data.accomodationsPages[0].body2}</Text>
       </ScrollView>
       </View>
@@ -51,5 +53,10 @@ const styles = StyleSheet.create({
     fontFamily: 'Arial',
     fontWeight: 'bold',
     fontStyle: 'italic',
+  },
+  lineStyle:{
+    borderWidth: 1,
+    borderColor: '#2C4500',
+    margin: 10,
   },
 });
