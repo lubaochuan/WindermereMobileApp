@@ -20,7 +20,28 @@ export class RecDetailScreen extends React.Component {
     return (
       <View style={styles.container}>
       <ScrollView>
-        <Text style={styles.text}>{params.detail}</Text>
+        <Text style={styles.detailheader}>{params.when}</Text>
+        <Text style={styles.text}>{params.whendetail}</Text>
+        <Text style={styles.detailheader}>{params.where}</Text>
+        <Text style={styles.text}>{params.wheredetail}</Text>
+        <Text style={styles.detailheader}>{params.how}</Text>
+        <Text style={styles.text}>{params.howdetail}</Text>
+        <Text style={styles.detailheader}>{params.time}</Text>
+        <Text style={styles.text}>{params.timedetail}</Text>
+        <View style = {styles.lineStyle}/>
+        <Text style={styles.header}>{params.header1}</Text>
+        <Text style={styles.body}>{params.body1}</Text>
+        <Text style={styles.header}>{params.header2}</Text>
+        <Text style={styles.body}>{params.body2}</Text>
+        <View style = {styles.lineStyle}/>
+        <Text style={styles.detailheader}>{params.when2}</Text>
+        <Text style={styles.text}>{params.whendetail2}</Text>
+        <Text style={styles.detailheader}>{params.where2}</Text>
+        <Text style={styles.text}>{params.wheredetail2}</Text>
+        <Text style={styles.detailheader}>{params.how2}</Text>
+        <Text style={styles.text}>{params.howdetail2}</Text>
+        <Text style={styles.detailheader}>{params.time2}</Text>
+        <Text style={styles.text}>{params.timedetail2}</Text>
         <TOButton
           title={'Show ' + params.key + ' on map'}
           onPress={()=>navigate('SingleMap', params.coordinate)}
@@ -38,10 +59,35 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   text: {
-    fontSize: 23,
+    fontSize: 20,
     margin: 10,
     textAlign: 'center',
     fontFamily: 'Arial',
+  },
+  header:{
+    fontSize: 25,
+    margin: 10,
+    fontFamily: 'Arial',
+    fontWeight: 'bold',
+  },
+  body: {
+    fontSize: 20,
+    margin: 5,
+    paddingLeft: 5,
+    fontFamily: 'Arial',
+  },
+  detailheader: {
+    fontSize: 25,
+    margin: 10,
+    textAlign: 'center',
+    fontFamily: 'Arial',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+  },
+  lineStyle:{
+    borderWidth: 1,
+    borderColor: '#2C4500',
+    margin: 10,
   },
   image: {
     width: '100%',
