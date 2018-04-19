@@ -63,4 +63,11 @@ export const data = {
       },
     },
   ],
+  contactPage: [
+    {
+      key: 'Contact',
+      header: '\nWe Would Love To Hear From You!\n\n',
+      body: 'Windermere Baptist Conference Center\nP.O. Box 458 Roach, MO 65613\n\n573-346-5200\nsales@windermereusa.org',
+    }
+  ],
 };
