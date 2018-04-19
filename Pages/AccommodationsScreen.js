@@ -18,9 +18,15 @@ export class AccommodationsScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+      <Image
+        style={{width: '100%', height: '20%'}}
+        source={require('../assets/accom.jpg')}
+        />
       <ScrollView>
       <Text style={styles.text}>{data.accomodationsPages[0].detail}</Text>
-        </ScrollView>
+      <Text style={styles.body}>{data.accomodationsPages[0].body}</Text>
+      <Text style={styles.text}>{data.accomodationsPages[0].body2}</Text>
+      </ScrollView>
       </View>
     );
   }
@@ -37,5 +43,13 @@ const styles = StyleSheet.create({
     margin: 10,
     textAlign: 'center',
     fontFamily: 'Arial',
+  },
+  body: {
+    fontSize: 30,
+    margin: 10,
+    textAlign: 'center',
+    fontFamily: 'Arial',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
   },
 });

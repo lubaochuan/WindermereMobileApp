@@ -6,7 +6,7 @@ export const data = {
   recPages: [
     {
       key: 'The Cave',
-      imageUrl: "assets/cave.jpg",
+      imageUrl: "./assets/cave.jpg",
       detail: "WHEN: \nMonday - Saturday* \n\nWHERE: \nMeet at the entrance of the cave \n\nHOW: \nSchedule and purchase tickets at Front Desk \n\nTIME: \nApproximately 90 minutes \n\n Do-It-Yourself Tour\nThe first 350 feet of Windermere's cave is open 24/7 for you to explore on your own. Our path is completely paved and partially lighted to allow you a wonderful experience as you walk.\n\nWhat do I bring? \n Bring clothes that you don't mind getting a little dirty. We will provide flashlights for all Beyond the Gate tours.",
       coordinate: {
         latitude: 38.0333826,
@@ -48,8 +48,10 @@ export const data = {
   ],
   accomodationsPages: [
     {
-      key: 'Deluxe Accommodations',
-      detail: 'Windermere offers a variety of accomodation options! Here are the list of our accomodation options! Contact us for more information.\n\nDeluxe\n\nStandard\n\nEconomy',
+      key: 'Accommodations',
+      detail: 'Windermere offers a variety of accomodation options! Here are the list of our accomodation options!\n',
+      body: 'Deluxe\n\nStandard\n\nEconomy\n',
+      body2: 'Contact us for more information!\n',
       coordinate: {
       },
     },
@@ -57,7 +59,16 @@ export const data = {
   diningPage: [
     {
       key: 'Dining',
-      detail: 'Dining Detail',
+      header: '\nAt Windermere Conference Center, even planners have a choice! We have three great dining opportunities for your group, regular buffet service dining, catered meals, and the Lakeside Grill.\n',
+      header2: 'Meal Times',
+      body1: 'Breakfast\n7:30-8:30 am\n\nLunch\n12:00-1:00 pm\n\nDinner\n5:30-6:30 pm',
+      smallprint: '*Arrangements for meals should be made when lodging is reserved. Changes in meal arrangements may be made with 24 hour notice by contacting the Front Desk. No credit is given for missed meals.',
+      header3: 'Buffet Style',
+      body2: 'Buffet dining includes an entree, several side dishes, a soup of the day, a salad bar with a wide variety of toppings and dressings, assorted desserts, and beverage center (juices, coffee, tea, and soda) at lunch and dinner. Meals are served in the main dining room. Breakfasts include hot breakfast entrees, side dishes, beverage center, plus assorted cereals, yogurt, & fruit.',
+      header4: 'Catering Services',
+      body3: "We want to help you get the most out of your retreat fellowship times. Let us handle preparing snacks and all the set-up and clean up associated so you can focus on ministering to your attendees, so don't forget about our extensive snack list! One of our more popular events is a breakfast brunch for your group served in a separate section of our dining hall. Whether you're a local group looking for catering services or staying in our lodging, we can meet your catering need.",
+      header5: 'Lakeside Grill',
+      body4: "The Lakeside Grill is serving up items hot off the grill, appetizers, and cool treats from the ice cream freezer. Groups can arrange parties, snack packages, or times for the cafe to be open for individual pay out of pocket orders. The Lakeside Grill's fun atomosphere create a great opportunity for guests to build relationships.\n\n Parties\n\nSnack Package Options\n\nHand Dipped Ice Cream\n\nSmoothies\n\nThe grill and Marina patio is a great spot to take in a movie with your whole group in a laid back, casual setting. It works well for small group meetings and fellowship times. The grill is also equipped with WIFI!\n",
       coordinate: {
 
       },
@@ -66,7 +77,7 @@ export const data = {
   contactPage: [
     {
       key: 'Contact',
-      header: '\nWe Would Love To Hear From You!\n\n',
+      header: 'We Would Love To Hear From You!\n\n',
       body: 'Windermere Baptist Conference Center\nP.O. Box 458 Roach, MO 65613\n\n573-346-5200\nsales@windermereusa.org',
     }
   ],

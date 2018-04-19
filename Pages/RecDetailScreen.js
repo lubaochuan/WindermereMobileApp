@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
 import {TOButton} from '../Components/TOButtons.js';
+import {data} from '../data/data.js';
 
 //This is a screen component that takes in a data object as a prop,
 //and uses this prop for page title and details on screen.

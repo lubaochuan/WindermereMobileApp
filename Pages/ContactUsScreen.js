@@ -16,6 +16,10 @@ export class ContactUsScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+      <Image
+        style={{width: '100%', height: '20%'}}
+        source={require('../assets/contact.jpg')}
+        />
       <ScrollView>
       <Text style={styles.header}>{data.contactPage[0].header}</Text>
       <Text style={styles.body}>{data.contactPage[0].body}</Text>
