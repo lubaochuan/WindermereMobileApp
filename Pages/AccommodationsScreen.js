@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     fontSize: 30,
     margin: 10,
     textAlign: 'center',
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
     fontWeight: 'bold',
     fontStyle: 'italic',
   },
