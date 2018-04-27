@@ -12,7 +12,8 @@ import {
 
 import {NavigationActions} from 'react-navigation';
 
-//Placeholder splash screen page.
+//Splash screen page
+//Tap to continue
 export class SplashScreen extends React.Component {
 
   render() {

@@ -12,7 +12,8 @@ import {TOButton} from '../Components/TOButtons.js';
 import {data} from '../data/data.js';
 
 
-//Placeholder for Accommodations Screen.
+//Accommodations Screen
+//pulls from data.js
 export class AccommodationsScreen extends React.Component {
 
   render() {

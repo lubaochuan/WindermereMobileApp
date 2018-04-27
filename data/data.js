@@ -1,5 +1,7 @@
 import React from 'react';
 
+//data used in Pages
+//information is pulled dynamically; not hard coded
 
 export const data = {
 

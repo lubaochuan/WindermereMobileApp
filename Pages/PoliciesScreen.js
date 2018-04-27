@@ -12,7 +12,8 @@ import {TOButton} from '../Components/TOButtons.js';
 import {data} from '../data/data.js';
 
 
-//Placeholder for Accommodations Screen.
+//Pulls from data.js to display info
+//Policies Screen
 export class PoliciesScreen extends React.Component {
 
   render() {

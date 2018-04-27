@@ -10,7 +10,8 @@ import {
 } from 'react-native';
 import {data} from '../data/data.js';
 
-//Placeholder for Contact Us Screen.
+//Contact Screen
+//Pulls from data.js to display info
 export class ContactUsScreen extends React.Component {
 
   render() {
