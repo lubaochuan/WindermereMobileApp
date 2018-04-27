@@ -22,6 +22,10 @@ export class RecreationsScreen extends React.Component {
 
     return(
       <View style={styles.container}>
+      <Image
+        style={{width: '100%', height: '20%'}}
+        source={require('../assets/recreation.jpg')}
+        />
 
         <View style={styles.body}>
 
