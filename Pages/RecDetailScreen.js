@@ -33,15 +33,6 @@ export class RecDetailScreen extends React.Component {
         <Text style={styles.body}>{params.body1}</Text>
         <Text style={styles.header}>{params.header2}</Text>
         <Text style={styles.body}>{params.body2}</Text>
-        <View style = {styles.lineStyle}/>
-        <Text style={styles.detailheader}>{params.when2}</Text>
-        <Text style={styles.text}>{params.whendetail2}</Text>
-        <Text style={styles.detailheader}>{params.where2}</Text>
-        <Text style={styles.text}>{params.wheredetail2}</Text>
-        <Text style={styles.detailheader}>{params.how2}</Text>
-        <Text style={styles.text}>{params.howdetail2}</Text>
-        <Text style={styles.detailheader}>{params.time2}</Text>
-        <Text style={styles.text}>{params.timedetail2}</Text>
         <TOButton
           title={'Show ' + params.key + ' on map'}
           onPress={()=>navigate('SingleMap', params.coordinate)}

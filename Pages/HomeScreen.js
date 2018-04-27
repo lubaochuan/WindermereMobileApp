@@ -70,7 +70,11 @@ export class HomeScreen extends React.Component {
               {
                 key: 'Campus Map',
                 nav: 'Map'
-              }
+              },
+              {
+                key: 'Guest Policies',
+                nav: 'Policies',
+              },
             ]}
             renderItem={
               ({item}) => <TOButton
