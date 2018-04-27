@@ -22,8 +22,8 @@ export const data = {
       header2: "What do I bring?",
       body2: "Bring clothes that you don't mind getting a little dirty. We will provide flashlights for all Beyond the Gate tours.\n",
       coordinate: {
-        latitude: 38.0333826,
-        longitude: -92.8508212,
+        latitude: 38.031336,
+        longitude: -92.837912,
       }
     },
     {
