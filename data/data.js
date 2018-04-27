@@ -184,7 +184,7 @@ export const data = {
       trashHeader: 'Trash',
       trashBody: 'There will be an additional cleaning charge resulting from any trash left in hallways or lobby areas of campus. There will be no charge for trash found in designated trash receptacles.',
       vehHeader: 'Vehicles',
-      vehBody: 'Observe speed limit signs. All passengers must be inside the vehicle in accordance with state highway traffic laws.'
+      vehBody: 'Observe speed limit signs. All passengers must be inside the vehicle in accordance with state highway traffic laws.\n'
     }
   ]
 };
