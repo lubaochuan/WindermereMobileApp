@@ -25,7 +25,9 @@ export class DiningHallScreen extends React.Component {
       <Text style={styles.header}>{data.diningPage[0].header}</Text>
       <View style = {styles.lineStyle}/>
       <Text style={styles.bodyheader}>{data.diningPage[0].header2}</Text>
-      <Text style={styles.body1}>{data.diningPage[0].body1}</Text>
+      <Text style={styles.body1}>{data.diningPage[0].breakfast}</Text>
+      <Text style={styles.body1}>{data.diningPage[0].lunch}</Text>
+      <Text style={styles.body1}>{data.diningPage[0].dinner}</Text>
       <Text style={styles.smallprint}>{data.diningPage[0].smallprint}</Text>
       <View style = {styles.lineStyle}/>
       <Text style={styles.bodyheader}>{data.diningPage[0].header3}</Text>
@@ -34,6 +36,11 @@ export class DiningHallScreen extends React.Component {
       <Text style={styles.body2}>{data.diningPage[0].body3}</Text>
       <Text style={styles.bodyheader}>{data.diningPage[0].header5}</Text>
       <Text style={styles.body2}>{data.diningPage[0].body4}</Text>
+      <Text style={styles.body2}>{data.diningPage[0].parties}</Text>
+      <Text style={styles.body2}>{data.diningPage[0].snack}</Text>
+      <Text style={styles.body2}>{data.diningPage[0].iceCream}</Text>
+      <Text style={styles.body2}>{data.diningPage[0].smoothies}</Text>
+      <Text style={styles.body2}>{data.diningPage[0].body5}</Text>
       </ScrollView>
       </View>
     );

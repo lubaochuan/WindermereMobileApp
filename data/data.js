@@ -117,14 +117,21 @@ export const data = {
       key: 'Dining',
       header: '\nAt Windermere Conference Center, even planners have a choice! We have three great dining opportunities for your group, regular buffet service dining, catered meals, and the Lakeside Grill.',
       header2: 'Meal Times',
-      body1: 'Breakfast\n7:30-8:30 am\n\nLunch\n12:00-1:00 pm\n\nDinner\n5:30-6:30 pm',
+      breakfast: 'Breakfast\n7:30-8:30 am',
+      lunch: 'Lunch\n12:00-1:00 pm',
+      dinner: 'Dinner\n5:30-6:30 pm',
       smallprint: '*Arrangements for meals should be made when lodging is reserved. Changes in meal arrangements may be made with 24 hour notice by contacting the Front Desk. No credit is given for missed meals.',
       header3: 'Buffet Style',
       body2: 'Buffet dining includes an entree, several side dishes, a soup of the day, a salad bar with a wide variety of toppings and dressings, assorted desserts, and beverage center (juices, coffee, tea, and soda) at lunch and dinner. Meals are served in the main dining room. Breakfasts include hot breakfast entrees, side dishes, beverage center, plus assorted cereals, yogurt, & fruit.',
       header4: 'Catering Services',
       body3: "We want to help you get the most out of your retreat fellowship times. Let us handle preparing snacks and all the set-up and clean up associated so you can focus on ministering to your attendees, so don't forget about our extensive snack list! One of our more popular events is a breakfast brunch for your group served in a separate section of our dining hall. Whether you're a local group looking for catering services or staying in our lodging, we can meet your catering need.",
       header5: 'Lakeside Grill',
-      body4: "The Lakeside Grill is serving up items hot off the grill, appetizers, and cool treats from the ice cream freezer. Groups can arrange parties, snack packages, or times for the cafe to be open for individual pay out of pocket orders. The Lakeside Grill's fun atomosphere create a great opportunity for guests to build relationships.\n\n Parties\n\nSnack Package Options\n\nHand Dipped Ice Cream\n\nSmoothies\n\nThe grill and Marina patio is a great spot to take in a movie with your whole group in a laid back, casual setting. It works well for small group meetings and fellowship times. The grill is also equipped with WIFI!\n\n",
+      body4: "The Lakeside Grill is serving up items hot off the grill, appetizers, and cool treats from the ice cream freezer. Groups can arrange parties, snack packages, or times for the cafe to be open for individual pay out of pocket orders. The Lakeside Grill's fun atomosphere create a great opportunity for guests to build relationships.",
+      parties: 'Parties',
+      snack: 'Snack Package Options',
+      iceCream: 'Hand Dipped Ice Cream',
+      smoothies: 'Smoothies',
+      body5: "The grill and Marina patio is a great spot to take in a movie with your whole group in a laid back, casual setting. It works well for small group meetings and fellowship times. The grill is also equipped with WIFI!\n",
       coordinate: {
 
       },
@@ -186,5 +193,5 @@ export const data = {
       vehHeader: 'Vehicles',
       vehBody: 'Observe speed limit signs. All passengers must be inside the vehicle in accordance with state highway traffic laws.\n'
     }
-  ]
+  ],
 };
