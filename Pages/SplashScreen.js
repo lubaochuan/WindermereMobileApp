@@ -5,9 +5,10 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   TouchableOpacity,
   Image,
-  StatusBar
+  StatusBar,
 } from 'react-native';
 
 import {NavigationActions} from 'react-navigation';
@@ -68,7 +69,7 @@ const styles = StyleSheet.create({
   text: {
     color: 'black',
     fontSize: 50,
-    fontFamily: 'Baskerville',
+    fontFamily: Platform.OS === 'ios' ? 'Baskerville' : 'sans-serif-light',
   },
   smalltext: {
     color: 'black'

@@ -5,6 +5,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   Button,
   TouchableHighlight,
   Image,
@@ -25,7 +26,7 @@ export class HomeScreen extends React.Component {
     },
     headerTitleStyle: {
       fontSize: 20,
-    fontFamily: 'ArialHebrew-Light',
+    fontFamily: Platform.OS === 'ios' ? 'ArialHebrew-Light' : 'sans-serif-medium',
       color: 'white'
     }
   };
@@ -102,7 +103,7 @@ const styles = StyleSheet.create({
     color: 'grey'
   },
   body: {
-    width: '100%',
+    width: Platform.OS === 'ios' ? '100%' : '95%',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',

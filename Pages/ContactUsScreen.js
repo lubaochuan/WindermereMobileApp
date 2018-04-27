@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   Button,
   ScrollView,
   TouchableHighlight,
@@ -55,13 +56,13 @@ const styles = StyleSheet.create({
     fontSize: 20,
     margin: 10,
     textAlign: 'center',
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
   },
   header: {
     fontSize: 25,
     fontWeight: 'bold',
     textAlign: 'center',
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
     margin: 10,
   },
   lineStyle:{

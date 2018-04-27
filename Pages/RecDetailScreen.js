@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {View, Text, ScrollView, Image, StyleSheet} from 'react-native';
+import {View, Text, ScrollView, Image, StyleSheet, Platform} from 'react-native';
 import {TOButton} from '../Components/TOButtons.js';
 import {data} from '../data/data.js';
 
@@ -53,25 +53,25 @@ const styles = StyleSheet.create({
     fontSize: 20,
     margin: 10,
     textAlign: 'center',
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
   },
   header:{
     fontSize: 25,
     margin: 10,
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
     fontWeight: 'bold',
   },
   body: {
     fontSize: 20,
     margin: 5,
     paddingLeft: 5,
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
   },
   detailheader: {
     fontSize: 25,
     margin: 10,
     textAlign: 'center',
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
     fontWeight: 'bold',
     fontStyle: 'italic',
   },

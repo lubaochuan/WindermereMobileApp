@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   Button,
   TouchableHighlight,
   TouchableOpacity,
@@ -43,7 +44,7 @@ const styles = StyleSheet.create({
   buttonText: {
     color: 'white',
     fontSize: 30,
-    fontFamily: 'ArialHebrew-Light',
+    fontFamily: Platform.OS === 'ios' ? 'ArialHebrew-Light' : 'sans-serif-medium',
     margin: 10,
   }
 });

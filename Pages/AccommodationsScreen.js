@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   ScrollView,
   FlatList,
   Image,
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
     fontSize: 23,
     margin: 10,
     textAlign: 'center',
-    fontFamily: 'Arial',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
   },
   body: {
     fontSize: 30,
