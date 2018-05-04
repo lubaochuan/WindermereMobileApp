@@ -18,21 +18,25 @@ export class ContactUsScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Image
-        style={{width: '100%', height: '20%'}}
-        source={require('../assets/contact.jpg')}
+        <Image
+          style={{width: '100%', height: '20%'}}
+          source={require('../assets/contact.jpg')}
         />
-      <ScrollView>
-        <Text style={styles.mainheader}>{data.contactPage[0].header}</Text>
-        <View style = {styles.lineStyle}/>
-        <Text style={styles.header}>{data.contactPage[0].addressheader}</Text>
-        <Text style={styles.body}>{data.contactPage[0].address}</Text>
-        <Text style={styles.header}>{data.contactPage[0].phoneheader}</Text>
-        <Text style={styles.body}>{data.contactPage[0].phone}</Text>
-        <Text style={styles.header}>{data.contactPage[0].emailheader}</Text>
-        <Text style={styles.body}>{data.contactPage[0].email}</Text>
-        <View style = {styles.lineStyle}/>
-      </ScrollView>
+        <ScrollView>
+          <Text style={styles.mainheader}>{data.contactPage.header}</Text>
+          <View style = {styles.lineStyle}/>
+
+          {data.contactPage.detail.map((item, index) => {
+            return(
+              <View key={index} style={styles.container}>
+                <Text style={styles.header}>{item.head}</Text>
+                <Text style={styles.body}>{item.body}</Text>
+              </View>
+            );
+          })}
+
+          <View style = {styles.lineStyle}/>
+        </ScrollView>
       </View>
     );
   }

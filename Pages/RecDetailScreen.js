@@ -11,7 +11,7 @@ import {data} from '../data/data.js';
 export class RecDetailScreen extends React.Component {
 
   static navigationOptions = ({navigation}) =>  ({
-    title: `${navigation.state.params.key}`,
+    title: `${navigation.state.params.title}`,
   });
 
   render(){
@@ -19,24 +19,30 @@ export class RecDetailScreen extends React.Component {
     const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
-      <ScrollView>
-        <Text style={styles.detailheader}>{params.when}</Text>
-        <Text style={styles.text}>{params.whendetail}</Text>
-        <Text style={styles.detailheader}>{params.where}</Text>
-        <Text style={styles.text}>{params.wheredetail}</Text>
-        <Text style={styles.detailheader}>{params.how}</Text>
-        <Text style={styles.text}>{params.howdetail}</Text>
-        <Text style={styles.detailheader}>{params.time}</Text>
-        <Text style={styles.text}>{params.timedetail}</Text>
-        <View style = {styles.lineStyle}/>
-        <Text style={styles.header}>{params.header1}</Text>
-        <Text style={styles.body}>{params.body1}</Text>
-        <Text style={styles.header}>{params.header2}</Text>
-        <Text style={styles.body}>{params.body2}</Text>
-        <TOButton
-          title={'Show ' + params.key + ' on map'}
-          onPress={()=>navigate('SingleMap', params.coordinate)}
-        />
+        <ScrollView>
+
+          <Text style={styles.detailheader}>WHEN</Text>
+          <Text style={styles.text}>{params.whendetail}</Text>
+          <Text style={styles.detailheader}>WHERE</Text>
+          <Text style={styles.text}>{params.wheredetail}</Text>
+          <Text style={styles.detailheader}>HOW</Text>
+          <Text style={styles.text}>{params.howdetail}</Text>
+          <Text style={styles.detailheader}>TIME</Text>
+          <Text style={styles.text}>{params.timedetail}</Text>
+
+          <View style = {styles.lineStyle}/>
+          {params.detail.map((item, index) => {
+            return (
+              <View key={index} style={styles.container}>
+                <Text style={styles.header}>{item.header}</Text>
+                <Text style={styles.body}>{item.body}</Text>
+              </View>
+            );
+          })}
+          <TOButton
+            title={'Show ' + params.title + ' on Map'}
+            onPress={()=>navigate('SingleMap', params.coordinate)}
+          />
         </ScrollView>
       </View>
     );

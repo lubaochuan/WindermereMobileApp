@@ -10,30 +10,38 @@ import {
   Animated
 } from 'react-native';
 import { MapView } from 'expo';
+import { data } from '../data/data.js';
 
-export class SingleMapScreen extends React.Component {
+
+export class MultiMapScreen extends React.Component {
+
 
   render() {
+    const {navigate} = this.props.navigation;
+    const {params} = this.props.navigation.state;
 
     return (
       <View style={{flex:1}}>
         <MapView
-          initialRegion={{
-            latitude: this.props.navigation.state.params.latitude,
-            longitude: this.props.navigation.state.params.longitude,
-            latitudeDelta: 0.0080,
-            longitudeDelta: 0.0080,
-          }}
+          ref={map => this.map = map}
+          initialRegion={params.initialRegion}
+          showsUserLocation={true}
           style={{flex: 1}}
           mapType='hybrid'
-          showsUserLocation={true}
         >
-          <MapView.Marker
-            coordinate={{
-              latitude: this.props.navigation.state.params.latitude,
-              longitude: this.props.navigation.state.params.longitude,
-            }}
-          />
+          {params.markers.map((marker, index) => {
+            return (
+              <MapView.Marker
+                key={index}
+                coordinate={marker.coordinate}
+                title={marker.title}
+                description={marker.description}
+              >
+
+              </MapView.Marker>
+            );
+          })}
+
         </MapView>
 
       </View>

@@ -11,6 +11,7 @@ import {PoliciesScreen} from '../Pages/PoliciesScreen.js';
 import {RecDetailScreen} from '../Pages/RecDetailScreen.js';
 import {SingleMapScreen} from '../Pages/SingleMapScreen.js';
 import {MapScreen} from '../Pages/MapScreen.js';
+import {MultiMapScreen} from '../Pages/MultiMapScreen.js'
 
 
 //StackNavigator that contains most of the pages of the application.
@@ -48,7 +49,13 @@ export const RootStack = StackNavigator({
   SingleMap: {
     screen: SingleMapScreen,
     navigationOptions: {
-      title: 'Map'
+      title: 'Campus Map'
+    }
+  },
+  MultiMap: {
+    screen: MultiMapScreen,
+    navigationOptions: {
+      title: 'Campus Map'
     }
   },
   Map: {

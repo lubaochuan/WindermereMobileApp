@@ -10,7 +10,7 @@ import {
   TouchableHighlight,
   Image,
   StatusBar,
-  FlatList
+  ScrollView
 } from 'react-native';
 import {TOButton} from '../Components/TOButtons.js';
 
@@ -31,6 +31,39 @@ export class HomeScreen extends React.Component {
     }
   };
 
+  constructor() {
+    super();
+
+    this.state = {
+      data: [
+        {
+          title: 'Accommodations',
+          nav: 'Accommodations',
+        },
+        {
+          title: 'Dining',
+          nav: 'Dining',
+        },
+        {
+          title: 'Recreation',
+          nav: 'Recreation',
+        },
+        {
+          title: 'Campus Map',
+          nav: 'Map',
+        },
+        {
+          title: 'Guest Policies',
+          nav: 'Policies',
+        },
+        {
+          title: 'Contact Us',
+          nav: 'Contact',
+        },
+      ],
+    }
+  }
+
   //Renders Windermere Logo, then
   //Renders Buttons to pages and page-groups.s
   render() {
@@ -42,48 +75,32 @@ export class HomeScreen extends React.Component {
           barStyle={'light-content'}
         />
         <View style={styles.body}>
-          <View style={styles.imageContainer}>
-            <Image
-              source={require('../assets/WinLogo.png')}
-              style={styles.logoImage}
-            />
-          </View>
 
-          <FlatList
+          <ScrollView
             style={{width: '100%'}}
-            data={[
-              {
-                key: 'Accommodations',
-                nav: 'Accommodations'
-              },
-              {
-                key: 'Dining',
-                nav: 'Dining'
-              },
-              {
-                key: 'Recreation',
-                nav: 'Recreation'
-              },
-              {
-                key: 'Contact Us',
-                nav: 'Contact'
-              },
-              {
-                key: 'Campus Map',
-                nav: 'Map'
-              },
-              {
-                key: 'Guest Policies',
-                nav: 'Policies',
-              },
-            ]}
-            renderItem={
-              ({item}) => <TOButton
-              title={item.key}
-              onPress={()=>navigate(item.nav)}
+            contentContainerStyle={{alignItems: 'center'}}
+          >
+
+            <View style={styles.imageContainer}>
+              <Image
+                source={require('../assets/WinLogo.png')}
+                style={styles.logoImage}
               />
-            }
-          />
+            </View>
+
+            {this.state.data.map((item, index) => {
+              return(
+                <TOButton
+                  key={index}
+                  title={item.title}
+                  onPress={()=>navigate(item.nav)}
+                />
+              );
+            })}
+
+          </ScrollView>
+
+
 
         </View>
       </View>

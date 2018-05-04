@@ -14,23 +14,33 @@ import {data} from '../data/data.js';
 
 
 //Accommodations Screen
-//pulls from data.js
+
 export class AccommodationsScreen extends React.Component {
 
   render() {
+    const {navigate} = this.props.navigation;
+
     return (
       <View style={styles.container}>
-      <Image
-        style={{width: '100%', height: '20%'}}
-        source={require('../assets/accom.jpg')}
+        <Image
+          style={{width: '100%', height: '20%'}}
+          source={require('../assets/accom.jpg')}
         />
-      <ScrollView>
-      <Text style={styles.text}>{data.accomodationsPages[0].detail}</Text>
-      <View style = {styles.lineStyle}/>
-      <Text style={styles.body}>{data.accomodationsPages[0].body}</Text>
-      <View style = {styles.lineStyle}/>
-      <Text style={styles.text}>{data.accomodationsPages[0].body2}</Text>
-      </ScrollView>
+        <ScrollView
+          style={{width: '100%'}}
+        >
+          <Text style={styles.text}>Windermere offers a variety of accomodation options!</Text>
+          <View style = {styles.lineStyle}/>
+          <Text style={styles.body}>Deluxe{"\n\n"}Standard{"\n\n"}Economy</Text>
+          <View style = {styles.lineStyle}/>
+          <Text style={styles.text}>We also offer a broad range of conference space options!{"\n"}Contact us or visit our site for more information!</Text>
+
+          <TOButton
+            title={'Show on Map'}
+            onPress={()=>navigate('MultiMap', data.accomodationsPage)}
+          />
+
+        </ScrollView>
       </View>
     );
   }

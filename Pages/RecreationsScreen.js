@@ -4,8 +4,8 @@ import {
   Text,
   StyleSheet,
   Platform,
-  FlatList,
   Image,
+  ScrollView
 } from 'react-native';
 
 import {TOButton} from '../Components/TOButtons.js';
@@ -22,26 +22,39 @@ export class RecreationsScreen extends React.Component {
 
     return(
       <View style={styles.container}>
-      <Image
-        style={{width: '100%', height: '20%'}}
-        source={require('../assets/recreation.jpg')}
+        <Image
+          style={{width: '100%', height: '20%'}}
+          source={require('../assets/recreation.jpg')}
         />
 
         <View style={styles.body}>
 
-         <Text style={styles.text}>Activities</Text>
-          <FlatList
-            style={{width: '100%'}}
-            data={data.recPages}
-            renderItem={
-              ({item}) => <TOButton
-              title={item.key}
-              onPress={()=>navigate('RecDetail', item)}
+          <ScrollView
+            style={{flex: 1, width: "100%"}}
+            contentContainerStyle={{alignItems: 'center'}}
+          >
 
-              />
-            }
-          />
+            <Text style={styles.text}>Activities</Text>
+
+            {data.recPages.map((activity, index) => {
+              return (
+                <TOButton
+                  key={index}
+                  style={{flex: 1}}
+                  title={activity.title}
+                  onPress={() => navigate('RecDetail', activity)}
+                />
+              );
+
+            })}
+
+          </ScrollView>
+
+
         </View>
+
+
+
       </View>
     );
   }
@@ -52,8 +65,12 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
     fontSize: 30,
     color: 'black',
     fontFamily: Platform.OS === 'ios' ? 'ArialHebrew-Light' : 'sans-serif-medium',
@@ -70,7 +87,6 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   logoImage: {
-    //marginBottom: 50,
     resizeMode: 'contain',
     width: '100%',
     tintColor: 'grey',

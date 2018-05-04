@@ -10,39 +10,47 @@ import {
   Image
 } from 'react-native';
 import {data} from '../data/data.js';
+import {TOButton} from '../Components/TOButtons.js';
 
 //Displays all information on dining
 //Pulls information from data.js
 export class DiningHallScreen extends React.Component {
 
   render() {
+    const {navigate} = this.props.navigation;
     return (
       <View style={styles.container}>
-      <Image
-        style={{width: '100%', height: '20%'}}
-        source={require('../assets/dining.jpg')}
-        />
-      <ScrollView>
-      <Text style={styles.header}>{data.diningPage[0].header}</Text>
-      <View style = {styles.lineStyle}/>
-      <Text style={styles.bodyheader}>{data.diningPage[0].header2}</Text>
-      <Text style={styles.body1}>{data.diningPage[0].breakfast}</Text>
-      <Text style={styles.body1}>{data.diningPage[0].lunch}</Text>
-      <Text style={styles.body1}>{data.diningPage[0].dinner}</Text>
-      <Text style={styles.smallprint}>{data.diningPage[0].smallprint}</Text>
-      <View style = {styles.lineStyle}/>
-      <Text style={styles.bodyheader}>{data.diningPage[0].header3}</Text>
-      <Text style={styles.body2}>{data.diningPage[0].body2}</Text>
-      <Text style={styles.bodyheader}>{data.diningPage[0].header4}</Text>
-      <Text style={styles.body2}>{data.diningPage[0].body3}</Text>
-      <Text style={styles.bodyheader}>{data.diningPage[0].header5}</Text>
-      <Text style={styles.body2}>{data.diningPage[0].body4}</Text>
-      <Text style={styles.body2}>{data.diningPage[0].parties}</Text>
-      <Text style={styles.body2}>{data.diningPage[0].snack}</Text>
-      <Text style={styles.body2}>{data.diningPage[0].iceCream}</Text>
-      <Text style={styles.body2}>{data.diningPage[0].smoothies}</Text>
-      <Text style={styles.body2}>{data.diningPage[0].body5}</Text>
-      </ScrollView>
+        <Image
+          style={{width: '100%', height: '20%'}}
+          source={require('../assets/dining.jpg')}
+          />
+        <ScrollView>
+          <Text style={styles.header}>{"\n"}At Windermere Conference Center, even planners have a choice! We have three great dining opportunities for your group, regular buffet service dining, catered meals, and the Lakeside Grill.</Text>
+          <View style = {styles.lineStyle}/>
+          <Text style={styles.bodyheader}>Meal Times</Text>
+          <Text style={styles.body1}>Breakfast {data.diningPage.breakfastTime}</Text>
+          <Text style={styles.body1}>Lunch {data.diningPage.lunchTime}</Text>
+          <Text style={styles.body1}>Dinner {data.diningPage.dinnerTime}</Text>
+
+          <Text style={styles.smallprint}>*Arrangements for meals should be made when lodging is reserved. Changes in meal arrangements may be made with 24 hour notice by contacting the Front Desk. No credit is given for missed meals.</Text>
+
+          <TOButton
+            title={'Show on Map'}
+            onPress={()=>navigate('MultiMap', data.diningPage)}
+          />
+
+          <View style = {styles.lineStyle}/>
+
+          {data.diningPage.detail.map((item, index) => {
+            return (
+              <View key={index} style={styles.container}>
+                <Text style={styles.bodyheader}>{item.header}</Text>
+                <Text style={styles.body2}>{item.body}</Text>
+              </View>
+            );
+          })}
+
+        </ScrollView>
       </View>
     );
   }

@@ -12,50 +12,13 @@ import {
 import { MapView } from 'expo';
 import { data } from '../data/data.js';
 
-//Will contain the interactive map, eventually.
-//Currently contains a static placeholder image of the windermere campus.
-
-//const screenWidth = Dimensions.get('window').width;
-//const screenHeight = Dimensions.get('window').height;
-
 export class MapScreen extends React.Component {
 
   constructor() {
     super();
 
     this.state = {
-      markers: [
-        {
-          title: "Start Point",
-          description: "This is the starting point",
-          coordinate: {
-            latitude: 38.0326914,
-            longitude: -92.8380096,
-            latitudeDelta: 0.0080,
-            longitudeDelta: 0.0080,
-          },
-          pinColor: 'red',
-        },
-        {
-          title: "Other Point",
-          description: "This is another point",
-          coordinate: {
-            latitude: 38.0316914,
-            longitude: -92.8370096,
-          },
-          pinColor: 'red',
-        },
-        {
-          title: "The Splash",
-          description: "The Splash",
-          coordinate: {
-            latitude: 38.0334189,
-            longitude: -92.8365549,
-          },
-          pinColor: 'red',
-        },
-      ],
-      region: {
+      initialRegion: {
         latitude: 38.0326914,
         longitude: -92.8380096,
         latitudeDelta: 0.0080,
@@ -72,46 +35,62 @@ export class MapScreen extends React.Component {
       <View style={{flex:1}}>
         <MapView
           ref={map => this.map = map}
-          initialRegion={this.state.region}
+          initialRegion={this.state.initialRegion}
           showsUserLocation={true}
           style={{flex: 1}}
           mapType='hybrid'
-          onRegionChange={ region => this.setState({region}) }
-          onRegionChangeComplete={ region => this.setState({region}) }
         >
-          <MapView.Marker
-            coordinate={this.state.region}
-            pinColor={'blue'}
-          />
-          {this.state.markers.map((marker, index) => {
+          {data.recPages.map((activity, index) => {
+            return (
+              <MapView.Marker
+                key={index}
+                coordinate={activity.coordinate}
+                title={activity.title}
+                pinColor={'#f79626'}
+              />
+            );
+          })}
+
+          {data.accomodationsPage.markers.map((marker, index) => {
             return (
               <MapView.Marker
                 key={index}
                 coordinate={marker.coordinate}
                 title={marker.title}
-                description={marker.description}
-                pinColor={marker.pinColor}
-              >
-
-              </MapView.Marker>
+                pinColor={'#0061aa'}
+              />
             );
           })}
 
+          {data.diningPage.markers.map((marker, index) => {
+            return (
+              <MapView.Marker
+                key={index}
+                coordinate={marker.coordinate}
+                title={marker.title}
+                pinColor={'#006f53'}
+              />
+            );
+          })}
+
+
+
+
         </MapView>
-        <Button
-          title={"Reset"}
-          onPress={()=>{this.map.animateToRegion(this.state.markers[0].coordinate, 500)}}
-        />
-        <Text>Lat: {this.state.region.latitude}</Text>
-        <Text>Long: {this.state.region.longitude}</Text>
-        <Text>dLat: {this.state.region.latitudeDelta}</Text>
-        <Text>dLong: {this.state.region.longitudeDelta}</Text>
+
 
       </View>
     );
   }
 
-}
+}//Class
+
+/*
+<Button
+  title={"Reset"}
+  onPress={()=>{this.map.animateToRegion(this.state.markers[0].coordinate, 500)}}
+/>
+*/
 
 const styles = StyleSheet.create({
   container: {
