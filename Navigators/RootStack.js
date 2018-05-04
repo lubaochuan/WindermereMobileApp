@@ -7,6 +7,7 @@ import {DiningHallScreen} from '../Pages/DiningHallScreen.js';
 import {AccommodationsScreen} from '../Pages/AccommodationsScreen.js';
 import {RecreationsScreen} from '../Pages/RecreationsScreen.js';
 import {ContactUsScreen} from '../Pages/ContactUsScreen.js';
+import {PoliciesScreen} from '../Pages/PoliciesScreen.js';
 import {RecDetailScreen} from '../Pages/RecDetailScreen.js';
 import {SingleMapScreen} from '../Pages/SingleMapScreen.js';
 import {MapScreen} from '../Pages/MapScreen.js';
@@ -55,7 +56,13 @@ export const RootStack = StackNavigator({
     navigationOptions: {
       title: 'Campus Map'
     }
-  }
+  },
+  Policies: {
+    screen: PoliciesScreen,
+    navigationOptions: {
+      title: 'Guest Policies'
+    }
+  },
 
 
 },{

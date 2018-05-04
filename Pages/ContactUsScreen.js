@@ -3,25 +3,36 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   Button,
+  ScrollView,
   TouchableHighlight,
   Image
 } from 'react-native';
+import {data} from '../data/data.js';
 
-//Placeholder for Contact Us Screen.
+//Contact Screen
+//Pulls from data.js to display info
 export class ContactUsScreen extends React.Component {
 
   render() {
-    const {navigate} = this.props.navigation;
-    return(
+    return (
       <View style={styles.container}>
-        <View style={styles.body}>
-          <Text style={styles.header}>Contact Us</Text>
-          <Text style={styles.text}>Windermere Baptist Conference Center</Text>
-          <Text style={styles.text}>P.O. Box 458 Roach, MO 65787</Text>
-          <Text style={styles.text}>573-346-5200 - Local</Text>
-          <Text style={styles.text}>sales@windermereusa.org</Text>
-        </View>
+      <Image
+        style={{width: '100%', height: '20%'}}
+        source={require('../assets/contact.jpg')}
+        />
+      <ScrollView>
+        <Text style={styles.mainheader}>{data.contactPage[0].header}</Text>
+        <View style = {styles.lineStyle}/>
+        <Text style={styles.header}>{data.contactPage[0].addressheader}</Text>
+        <Text style={styles.body}>{data.contactPage[0].address}</Text>
+        <Text style={styles.header}>{data.contactPage[0].phoneheader}</Text>
+        <Text style={styles.body}>{data.contactPage[0].phone}</Text>
+        <Text style={styles.header}>{data.contactPage[0].emailheader}</Text>
+        <Text style={styles.body}>{data.contactPage[0].email}</Text>
+        <View style = {styles.lineStyle}/>
+      </ScrollView>
       </View>
     );
   }
@@ -31,21 +42,32 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: 'center',
-    justifyContent: 'center'
+    justifyContent: 'center',
+  },
+  mainheader: {
+    fontSize: 30,
+    margin: 10,
+    textAlign: 'center',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
+    fontWeight: 'bold',
+    fontStyle: 'italic',
   },
   body: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  text: {
     fontSize: 20,
-    margin: 1.5,
-    color: 'black',
+    margin: 10,
+    textAlign: 'center',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
   },
   header: {
-    fontSize: 30,
-    color: 'black',
+    fontSize: 25,
     fontWeight: 'bold',
+    textAlign: 'center',
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
+    margin: 10,
   },
-})
+  lineStyle:{
+    borderWidth: 1,
+    borderColor: '#2C4500',
+    margin: 10,
+  },
+});

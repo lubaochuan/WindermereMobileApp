@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View, Button, Image } from 'react-native';
+import {StyleSheet, Platform, Text, View, Button, Image } from 'react-native';
 import {TabNavigator} from 'react-navigation';
 
 import {MapScreen} from '../Pages/MapScreen.js';
@@ -34,7 +34,7 @@ export const RootTabs = TabNavigator({
     inactiveBackgroundColor: '#2C4500',
     labelStyle: {
       fontSize: 25,
-    fontFamily: 'ArialHebrew-Light',
+    fontFamily: Platform.OS === 'ios' ? 'ArialHebrew-Light' : 'sans-serif-medium',
     },
   }
 });

@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   FlatList,
   Image,
 } from 'react-native';
@@ -21,6 +22,10 @@ export class RecreationsScreen extends React.Component {
 
     return(
       <View style={styles.container}>
+      <Image
+        style={{width: '100%', height: '20%'}}
+        source={require('../assets/recreation.jpg')}
+        />
 
         <View style={styles.body}>
 
@@ -51,11 +56,11 @@ const styles = StyleSheet.create({
   text: {
     fontSize: 30,
     color: 'black',
-    fontFamily: 'ArialHebrew-Light',
+    fontFamily: Platform.OS === 'ios' ? 'ArialHebrew-Light' : 'sans-serif-medium',
     margin: 30,
   },
   body: {
-    width: '100%',
+    width: Platform.OS === 'ios' ? '100%' : '95%',
     flex: 1,
     margin: 5,
     justifyContent: 'center',
