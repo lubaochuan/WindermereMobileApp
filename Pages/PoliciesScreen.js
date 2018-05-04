@@ -4,38 +4,40 @@ import {
   Text,
   StyleSheet,
   Platform,
-  Button,
   ScrollView,
-  TouchableHighlight,
-  Image
+  FlatList,
+  Image,
 } from 'react-native';
+
+import {TOButton} from '../Components/TOButtons.js';
 import {data} from '../data/data.js';
 
-//Contact Screen
+
 //Pulls from data.js to display info
-export class ContactUsScreen extends React.Component {
+//Policies Screen
+export class PoliciesScreen extends React.Component {
 
   render() {
     return (
       <View style={styles.container}>
         <Image
           style={{width: '100%', height: '20%'}}
-          source={require('../assets/contact.jpg')}
-        />
+          source={require('../assets/policy.jpg')}
+          />
         <ScrollView>
-          <Text style={styles.mainheader}>{data.contactPage.header}</Text>
+          <Text style={styles.title}>Guest Rules and Policies</Text>
+          <Text style={styles.description}>{data.policiesPage.description}</Text>
           <View style = {styles.lineStyle}/>
 
-          {data.contactPage.detail.map((item, index) => {
-            return(
+          {data.policiesPage.detail.map((item, index)=>{
+            return (
               <View key={index} style={styles.container}>
-                <Text style={styles.header}>{item.head}</Text>
+                <Text style={styles.head}>{item.head}</Text>
                 <Text style={styles.body}>{item.body}</Text>
               </View>
             );
           })}
 
-          <View style = {styles.lineStyle}/>
         </ScrollView>
       </View>
     );
@@ -48,26 +50,31 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  mainheader: {
-    fontSize: 30,
+  title:{
+    fontSize: 25,
     margin: 10,
-    textAlign: 'center',
     fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
     fontWeight: 'bold',
-    fontStyle: 'italic',
+    textAlign: 'center',
+  },
+  description: {
+    fontSize: 20,
+    margin: 5,
+    fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
+    textAlign: 'center',
   },
   body: {
     fontSize: 20,
-    margin: 10,
-    textAlign: 'center',
+    margin: 5,
+    paddingLeft: 5,
     fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
   },
-  header: {
-    fontSize: 25,
-    fontWeight: 'bold',
-    textAlign: 'center',
+  head: {
+    fontSize: 22,
+    margin: 5,
+    paddingLeft: 5,
     fontFamily: Platform.OS === 'ios' ? 'Arial' : 'sans-serif-medium',
-    margin: 10,
+    fontWeight: 'bold',
   },
   lineStyle:{
     borderWidth: 1,

@@ -3,6 +3,7 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   Button,
   TouchableHighlight,
   TouchableOpacity,
@@ -33,16 +34,17 @@ const styles = StyleSheet.create({
   buttonContainer: {
     width: '98%',
     margin:5,
-    backgroundColor: 'lightgrey',
+    backgroundColor: 'grey',
   },
   highlight: {
     width: '100%',
-    backgroundColor: 'grey',
+    backgroundColor: '#2C4500',
     alignItems: 'center',
   },
   buttonText: {
     color: 'white',
     fontSize: 30,
+    fontFamily: Platform.OS === 'ios' ? 'ArialHebrew-Light' : 'sans-serif-medium',
     margin: 10,
   }
 });

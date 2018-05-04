@@ -15,9 +15,9 @@ export function navOptions(t, back){
   {
     return({
       title: t,
-      headerTitleStyle: {color: 'grey'},
-      headerBackTitleStyle: {color: 'grey'},
-      headerTintColor: 'grey',
+      headerTitleStyle: {color: '#2C4500'},
+      headerBackTitleStyle: {color: '#2C4500'},
+      headerTintColor: '#2C4500',
       headerStyle: {backgroundColor: "#cccccc"},
     });
   }
@@ -26,7 +26,7 @@ export function navOptions(t, back){
   {
     return({
       title: t,
-      headerTitleStyle: {color: 'grey'},
+      headerTitleStyle: {color: '#2C4500'},
       headerStyle: {backgroundColor: "#cccccc"},
       headerLeft: null,
     });

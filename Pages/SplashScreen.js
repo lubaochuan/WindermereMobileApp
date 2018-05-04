@@ -5,14 +5,16 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   TouchableOpacity,
   Image,
-  StatusBar
+  StatusBar,
 } from 'react-native';
 
 import {NavigationActions} from 'react-navigation';
 
-//Placeholder splash screen page.
+//Splash screen page
+//Tap to continue
 export class SplashScreen extends React.Component {
 
   render() {
@@ -42,7 +44,7 @@ export class SplashScreen extends React.Component {
                 style={styles.logoImage}
               />
             </View>
-            <Text style={styles.smalltext}>Press to Continue</Text>
+            <Text style={styles.smalltext}>Tap to Continue</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -65,11 +67,12 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   text: {
-    color: 'grey',
-    fontSize: 30,
+    color: 'black',
+    fontSize: 50,
+    fontFamily: Platform.OS === 'ios' ? 'Baskerville' : 'sans-serif-light',
   },
   smalltext: {
-    color: 'grey'
+    color: 'black'
   },
   imageContainer: {
     width: '80%',
@@ -78,6 +81,6 @@ const styles = StyleSheet.create({
     //marginBottom: 50,
     resizeMode: 'contain',
     width: '100%',
-    tintColor: 'grey',
+    //tintColor: 'grey',
   }
 });

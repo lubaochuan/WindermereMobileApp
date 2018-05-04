@@ -3,12 +3,14 @@ import {
   View,
   Text,
   StyleSheet,
-  FlatList,
+  Platform,
   Image,
+  ScrollView
 } from 'react-native';
 
 import {TOButton} from '../Components/TOButtons.js';
-import {recreations} from '../data/RecData.js';
+import {data} from '../data/data.js';
+//import {recreations} from '../data/RecData.js';
 
 
 //This is the Recreations Page.  It display all the available recreation events available on campus.
@@ -20,22 +22,39 @@ export class RecreationsScreen extends React.Component {
 
     return(
       <View style={styles.container}>
+        <Image
+          style={{width: '100%', height: '20%'}}
+          source={require('../assets/recreation.jpg')}
+        />
 
         <View style={styles.body}>
 
-          <Text style={styles.text}>Activities</Text>
+          <ScrollView
+            style={{flex: 1, width: "100%"}}
+            contentContainerStyle={{alignItems: 'center'}}
+          >
 
-          <FlatList
-            style={{width: '100%'}}
-            data={recreations.activities}
-            renderItem={
-              ({item}) => <TOButton
-              title={item.key}
-              onPress={()=>navigate('RecDetail', item)}
-              />
-            }
-          />
+            <Text style={styles.text}>Activities</Text>
+
+            {data.recPages.map((activity, index) => {
+              return (
+                <TOButton
+                  key={index}
+                  style={{flex: 1}}
+                  title={activity.title}
+                  onPress={() => navigate('RecDetail', activity)}
+                />
+              );
+
+            })}
+
+          </ScrollView>
+
+
         </View>
+
+
+
       </View>
     );
   }
@@ -46,15 +65,21 @@ const styles = StyleSheet.create({
     width: '100%',
     flex: 1,
     alignItems: 'center',
+    justifyContent: 'center',
   },
   text: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
     fontSize: 30,
-    color: 'grey',
+    color: 'black',
+    fontFamily: Platform.OS === 'ios' ? 'ArialHebrew-Light' : 'sans-serif-medium',
     margin: 30,
   },
   body: {
-    width: '100%',
+    width: Platform.OS === 'ios' ? '100%' : '95%',
     flex: 1,
+    margin: 5,
     justifyContent: 'center',
     alignItems: 'center',
   },
@@ -62,7 +87,6 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   logoImage: {
-    //marginBottom: 50,
     resizeMode: 'contain',
     width: '100%',
     tintColor: 'grey',

@@ -7,7 +7,11 @@ import {DiningHallScreen} from '../Pages/DiningHallScreen.js';
 import {AccommodationsScreen} from '../Pages/AccommodationsScreen.js';
 import {RecreationsScreen} from '../Pages/RecreationsScreen.js';
 import {ContactUsScreen} from '../Pages/ContactUsScreen.js';
+import {PoliciesScreen} from '../Pages/PoliciesScreen.js';
 import {RecDetailScreen} from '../Pages/RecDetailScreen.js';
+import {SingleMapScreen} from '../Pages/SingleMapScreen.js';
+import {MapScreen} from '../Pages/MapScreen.js';
+import {MultiMapScreen} from '../Pages/MultiMapScreen.js'
 
 
 //StackNavigator that contains most of the pages of the application.
@@ -41,13 +45,39 @@ export const RootStack = StackNavigator({
     navigationOptions: {
       title: 'Contact Us'
     }
-  }
+  },
+  SingleMap: {
+    screen: SingleMapScreen,
+    navigationOptions: {
+      title: 'Campus Map'
+    }
+  },
+  MultiMap: {
+    screen: MultiMapScreen,
+    navigationOptions: {
+      title: 'Campus Map'
+    }
+  },
+  Map: {
+    screen: MapScreen,
+    navigationOptions: {
+      title: 'Campus Map'
+    }
+  },
+  Policies: {
+    screen: PoliciesScreen,
+    navigationOptions: {
+      title: 'Guest Policies'
+    }
+  },
+
+
 },{
   //This is configuring shared attributes of all pages in the StackNavigator.
   //Specifically, the header.
   navigationOptions: {
     headerStyle: {
-      backgroundColor: 'grey',
+      backgroundColor: '#2C4500',
     },
     headerTitleStyle: {
       fontSize: 20,
@@ -55,6 +85,7 @@ export const RootStack = StackNavigator({
     headerTintColor: 'white',
     headerBackTitleStyle: {
       fontSize: 20,
+    fontFamily: 'ArialHebrew-Light',
     }
   }
 }

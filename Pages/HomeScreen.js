@@ -5,11 +5,12 @@ import {
   View,
   Text,
   StyleSheet,
+  Platform,
   Button,
   TouchableHighlight,
   Image,
   StatusBar,
-  FlatList
+  ScrollView
 } from 'react-native';
 import {TOButton} from '../Components/TOButtons.js';
 
@@ -21,13 +22,47 @@ export class HomeScreen extends React.Component {
   static navigationOptions = {
     title: 'Home',
     headerStyle: {
-      backgroundColor: 'grey'
+      backgroundColor: '#2C4500'
     },
     headerTitleStyle: {
       fontSize: 20,
+    fontFamily: Platform.OS === 'ios' ? 'ArialHebrew-Light' : 'sans-serif-medium',
       color: 'white'
     }
   };
+
+  constructor() {
+    super();
+
+    this.state = {
+      data: [
+        {
+          title: 'Accommodations',
+          nav: 'Accommodations',
+        },
+        {
+          title: 'Dining',
+          nav: 'Dining',
+        },
+        {
+          title: 'Recreation',
+          nav: 'Recreation',
+        },
+        {
+          title: 'Campus Map',
+          nav: 'Map',
+        },
+        {
+          title: 'Guest Policies',
+          nav: 'Policies',
+        },
+        {
+          title: 'Contact Us',
+          nav: 'Contact',
+        },
+      ],
+    }
+  }
 
   //Renders Windermere Logo, then
   //Renders Buttons to pages and page-groups.s
@@ -40,41 +75,33 @@ export class HomeScreen extends React.Component {
           barStyle={'light-content'}
         />
         <View style={styles.body}>
-          <View style={styles.imageContainer}>
-            <Image
-              source={require('../assets/WinLogo.png')}
-              style={styles.logoImage}
-            />
-          </View>
 
-          <FlatList
+          <ScrollView
             style={{width: '100%'}}
-            data={[
-              {
-                key: 'Accommodations',
-                nav: 'Accommodations'
-              },
-              {
-                key: 'Dining',
-                nav: 'Dining'
-              },
-              {
-                key: 'Recreation',
-                nav: 'Recreation'
-              },
-              {
-                key: 'Contact Us',
-                nav: 'Contact'
-              }
-            ]}
-            renderItem={
-              ({item}) => <TOButton
-              title={item.key}
-              onPress={()=>navigate(item.nav)}
+            contentContainerStyle={{alignItems: 'center'}}
+          >
+
+            <View style={styles.imageContainer}>
+              <Image
+                source={require('../assets/WinLogo.png')}
+                style={styles.logoImage}
               />
-            }
-          />
-          
+            </View>
+
+            {this.state.data.map((item, index) => {
+              return(
+                <TOButton
+                  key={index}
+                  title={item.title}
+                  onPress={()=>navigate(item.nav)}
+                />
+              );
+            })}
+
+          </ScrollView>
+
+
+
         </View>
       </View>
     );
@@ -93,7 +120,7 @@ const styles = StyleSheet.create({
     color: 'grey'
   },
   body: {
-    width: '100%',
+    width: Platform.OS === 'ios' ? '100%' : '95%',
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -105,7 +132,7 @@ const styles = StyleSheet.create({
     //marginBottom: 50,
     resizeMode: 'contain',
     width: '100%',
-    tintColor: 'grey',
+    //tintColor: 'grey',
   }
 
 });
