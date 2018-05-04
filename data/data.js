@@ -6,7 +6,7 @@ export const data = {
   recPages: [
     {
       key: 'The Cave',
-      imageUrl: "assets/cave.jpg",
+      imageUrl: "./assets/cave.jpg",
       detail: "WHEN: \nMonday - Saturday* \n\nWHERE: \nMeet at the entrance of the cave \n\nHOW: \nSchedule and purchase tickets at Front Desk \n\nTIME: \nApproximately 90 minutes \n\n Do-It-Yourself Tour\nThe first 350 feet of Windermere's cave is open 24/7 for you to explore on your own. Our path is completely paved and partially lighted to allow you a wonderful experience as you walk.\n\nWhat do I bring? \n Bring clothes that you don't mind getting a little dirty. We will provide flashlights for all Beyond the Gate tours.",
       coordinate: {
         latitude: 38.0333826,

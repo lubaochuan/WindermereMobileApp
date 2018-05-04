@@ -7,7 +7,7 @@ import {
   TouchableHighlight,
   Image
 } from 'react-native';
-
+import data from '../data/data.js';
 //Placeholder for Dining screen.
 export class DiningHallScreen extends React.Component {
 
