@@ -12,6 +12,9 @@ import {
 import { MapView } from 'expo';
 import { data } from '../data/data.js';
 
+/*
+This map component takes an array of objects containing coordinates from its props and maps them as markers on a mapview.
+*/
 
 export class MultiMapScreen extends React.Component {
 

@@ -10,7 +10,6 @@ import {
 
 import {TOButton} from '../Components/TOButtons.js';
 import {data} from '../data/data.js';
-//import {recreations} from '../data/RecData.js';
 
 
 //This is the Recreations Page.  It display all the available recreation events available on campus.

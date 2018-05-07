@@ -12,6 +12,13 @@ import {
 import { MapView } from 'expo';
 import { data } from '../data/data.js';
 
+/*
+This is the combined map page.
+This page contains all markers present in all other instances of campus maps.
+Pulls markers from data object from accommodations, dining, and recreation.
+*/
+
+
 export class MapScreen extends React.Component {
 
   constructor() {

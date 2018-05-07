@@ -1,5 +1,9 @@
 import React from 'react';
 
+/*
+This data object contains all of the configutable text and data for pages throughout the application.
+*/
+
 
 export const data = {
 

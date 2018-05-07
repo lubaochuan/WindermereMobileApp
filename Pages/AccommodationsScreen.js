@@ -13,7 +13,11 @@ import {TOButton} from '../Components/TOButtons.js';
 import {data} from '../data/data.js';
 
 
-//Accommodations Screen
+/*
+This is the Accomodations Screen.
+Contains limited information on Camp accommodations and a button to the map.
+Map button pulls data from the data object to populate the map with multiple markers.
+*/
 
 export class AccommodationsScreen extends React.Component {
 

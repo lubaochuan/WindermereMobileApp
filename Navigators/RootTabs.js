@@ -7,7 +7,7 @@ import {RootStack} from './RootStack.js';
 
 
 //TabNavigator that contains the RootStack and the Map page.
-//Later, will likely replace map page with a StackNavigator with the map page included.
+//This is no longer used, but has not yet been removed from the file directory.
 export const RootTabs = TabNavigator({
   Home: {
     screen: RootStack,

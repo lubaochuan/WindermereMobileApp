@@ -13,6 +13,9 @@ import { MapView } from 'expo';
 
 export class SingleMapScreen extends React.Component {
 
+  //Single map takes a coordiate from the component's prop and displays a single marker.
+  //Used exclusively to render individual markers for recreations.
+
   render() {
 
     return (

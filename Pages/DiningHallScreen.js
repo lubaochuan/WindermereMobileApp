@@ -14,6 +14,7 @@ import {TOButton} from '../Components/TOButtons.js';
 
 //Displays all information on dining
 //Pulls information from data.js
+//Pulls markers from data object to display dining hall and snack shack
 export class DiningHallScreen extends React.Component {
 
   render() {
