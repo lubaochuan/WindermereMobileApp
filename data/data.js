@@ -43,7 +43,7 @@ export const data = {
         },
         {
           header: 'Private Sessions',
-          body: 'Are you looking for something that is more group oriented? We have the perfect solution for you, a Private Session! Our staff will work on on one with you to help design the perfect program for what you are wanting to do. Private Sessions are typically 3 to 8 hours, but we can adjust that to meet your groups needs.',
+          body: 'Are you looking for something that is more group oriented? We have the perfect solution for you, a Private Session! Our staff will work one-on-one with you to help design the perfect program for what you are wanting to do. Private Sessions are typically 3 to 8 hours, but we can adjust that to meet your groups needs.',
         },
       ],
       coordinate: {
@@ -335,7 +335,7 @@ export const data = {
         },
         {
           header: 'Lakeside Grill',
-          body: "The Lakeside Grill is serving up items hot off the grill, appetizers, and cool treats from the ice cream freezer. \nGroups can arrange parties, snack packages, or times for the cafe to be open for individual pay out of pocket orders. \nThe Lakeside Grill's fun atomosphere create a great opportunity for guests to build relationships. \nThe grill and Marina patio is a great spot to take in a movie with your whole group in a laid back, casual setting. It works well for small group meetings and fellowship times. \nThe grill is also equipped with WiFi!",
+          body: "The Lakeside Grill is serving up items hot off the grill, appetizers, and cool treats from the ice cream freezer. \nGroups can arrange parties, snack packages, or times for the cafe to be open for individual pay out of pocket orders. \nThe Lakeside Grill's fun atmosphere create a great opportunity for guests to build relationships. \nThe grill and Marina patio is a great spot to take in a movie with your whole group in a laid back, casual setting. It works well for small group meetings and fellowship times. \nThe grill is also equipped with WiFi!",
         },
       ],
 
@@ -373,7 +373,7 @@ export const data = {
       detail: [
         {
           head: 'Alcohol',
-          body: 'Use or possession of alcoholic beverages or illicit drugs is forbidden. Guests in non-compliance will be asked to leave, will forfeit any right to refund, and may jeopardize the invitation of their gorup to return to Windermere.',
+          body: 'Use or possession of alcoholic beverages or illicit drugs is forbidden. Guests in non-compliance will be asked to leave, will forfeit any right to refund, and may jeopardize the invitation of their group to return to Windermere.',
         },
         {
           head: 'Campfire',
@@ -405,7 +405,7 @@ export const data = {
         },
         {
           head: 'Medical',
-          body: "Windermere staff must be notified of all medical incidents that occur on the premises.\n\nFor secondary reinbursement by Windermere for any medical incidents, please contact the Account Manager. The guest is responsible for providing evidence of any and all applicable insurance to the medical provider. Once the guest's insurance company has paid the medical provider, the guest msut provide an explanation of benefits from the insurance company to Windermere.",
+          body: "Windermere staff must be notified of all medical incidents that occur on the premises.\n\nFor secondary reinbursement by Windermere for any medical incidents, please contact the Account Manager. The guest is responsible for providing evidence of any and all applicable insurance to the medical provider. Once the guest's insurance company has paid the medical provider, the guest must provide an explanation of benefits from the insurance company to Windermere.",
         },
         {
           head: 'Mail',
