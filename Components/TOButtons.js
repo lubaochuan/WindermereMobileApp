@@ -33,7 +33,7 @@ export class TOButton extends React.Component {
 const styles = StyleSheet.create({
   buttonContainer: {
     width: '98%',
-    margin:5,
+    margin: 5,
     backgroundColor: 'grey',
   },
   highlight: {

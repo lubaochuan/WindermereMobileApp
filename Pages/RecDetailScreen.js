@@ -4,10 +4,8 @@ import {TOButton} from '../Components/TOButtons.js';
 import {data} from '../data/data.js';
 
 //This is a screen component that takes in a data object as a prop,
-//and uses this prop for page title and details on screen.
-//This functionality will be expanded upon when we populate the recreation pages with all their relevant information.
-//Using a data object prop will allow us to get this information from outside the app and pass it in,
-//so data could feasibly be changed without updating the app.
+//and uses this prop for page details on screen.
+
 export class RecDetailScreen extends React.Component {
 
   static navigationOptions = ({navigation}) =>  ({
