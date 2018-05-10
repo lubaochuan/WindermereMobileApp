@@ -1,6 +1,7 @@
 /* @flow */
 
 import React, { Component } from 'react';
+import { AppLoading } from 'expo';
 import {
   View,
   Text,
@@ -17,7 +18,35 @@ import {NavigationActions} from 'react-navigation';
 //Tap to continue
 export class SplashScreen extends React.Component {
 
+  async _cacheResourcesAsync() {
+    const images = [
+      require('../assets/icon.png'),
+      require('../assets/splash.png'),
+    ];
+
+    const cacheImages = images.map((image) => {
+      return Asset.fromModule(image).downloadAsync();
+    });
+    return Promise.all(cacheImages)
+
+  }
+
+  state = {
+    isReady: false,
+  };
+
+
   render() {
+    if (!this.state.isReady) {
+      return (
+        <AppLoading
+          startAsync={this._cacheResourcesAsync}
+          onFinish={() => this.setState({ isReady: true })}
+          onError={console.warn}
+        />
+      );
+    }
+
     const {navigate} = this.props.navigation;
 
     //use this as the navigation so the user cannot navigate back to the splash screen
