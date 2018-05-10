@@ -1,5 +1,30 @@
 {
   "expo": {
-    "sdkVersion": "21.0.0"
+    "name": "Camp Express",
+    "description": "An app for camps.",
+    "slug": "camp-express",
+    "privacy": "public",
+    "sdkVersion": "27.0.0",
+    "platforms": ["ios", "android"],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0abde1"
+    },
+    "ios": {
+      "bundleIdentifier": "org.createdtolearn.campexpress"
+    },
+    "android": {
+      "package": "org.createdtolearn.campexpress",
+      "versionCode": 2,
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyDhfX56J2aJ1JPxykZ468pqE0MwoERK7cs"
+        }
+      }
+    }
   }
 }
